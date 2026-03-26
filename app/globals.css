@@ -3,81 +3,154 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ============================================
+   🎨 KID-FRIENDLY COLOR PALETTE
+   ============================================ */
 :root {
-  --background: oklch(0.98 0.002 268.5);
-  --foreground: oklch(0.24 0.015 286.6);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.24 0.015 286.6);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.24 0.015 286.6);
-  --primary: oklch(0.62 0.142 263.4);
-  --primary-foreground: oklch(0.98 0.01 276);
-  --secondary: oklch(0.76 0.098 40.8);
-  --secondary-foreground: oklch(0.24 0.015 286.6);
-  --muted: oklch(0.92 0.008 258);
-  --muted-foreground: oklch(0.54 0.025 284);
-  --accent: oklch(0.73 0.133 28.7);
-  --accent-foreground: oklch(0.98 0.01 276);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.94 0.005 268);
-  --input: oklch(0.96 0.006 270);
-  --ring: oklch(0.62 0.142 263.4);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  /* Main backgrounds - warm & inviting */
+  --background: oklch(0.98 0.015 85);
+  --foreground: oklch(0.25 0.03 280);
+  
+  /* Cards - soft white with warmth */
+  --card: oklch(0.995 0.008 90);
+  --card-foreground: oklch(0.25 0.03 280);
+  
+  /* Popover */
+  --popover: oklch(0.995 0.008 90);
+  --popover-foreground: oklch(0.25 0.03 280);
+  
+  /* Primary - Vibrant Purple */
+  --primary: oklch(0.60 0.22 285);
+  --primary-foreground: oklch(0.99 0 0);
+  
+  /* Secondary - Sunny Orange */
+  --secondary: oklch(0.72 0.18 55);
+  --secondary-foreground: oklch(0.20 0.02 50);
+  
+  /* Accent - Playful Teal */
+  --accent: oklch(0.70 0.15 175);
+  --accent-foreground: oklch(0.99 0 0);
+  
+  /* Muted - Soft lavender */
+  --muted: oklch(0.94 0.02 290);
+  --muted-foreground: oklch(0.50 0.03 280);
+  
+  /* Destructive */
+  --destructive: oklch(0.60 0.22 25);
+  --destructive-foreground: oklch(0.98 0.01 25);
+  
+  /* Borders & Inputs - Soft and rounded feel */
+  --border: oklch(0.92 0.02 280);
+  --input: oklch(0.96 0.01 280);
+  --ring: oklch(0.65 0.20 285);
+  
+  /* Charts - Rainbow palette for kids */
+  --chart-1: oklch(0.68 0.22 340);  /* Pink */
+  --chart-2: oklch(0.70 0.18 175);  /* Teal */
+  --chart-3: oklch(0.65 0.20 285);  /* Purple */
+  --chart-4: oklch(0.78 0.18 85);   /* Yellow */
+  --chart-5: oklch(0.72 0.20 145);  /* Green */
+  
+  /* Increased radius for playfulness */
+  --radius: 1.25rem;
+  
+  /* Sidebar */
+  --sidebar: oklch(0.98 0.02 290);
+  --sidebar-foreground: oklch(0.25 0.03 280);
+  --sidebar-primary: oklch(0.60 0.22 285);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.94 0.03 290);
+  --sidebar-accent-foreground: oklch(0.25 0.03 280);
+  --sidebar-border: oklch(0.90 0.02 280);
+  --sidebar-ring: oklch(0.65 0.20 285);
+
+  /* ============================================
+     🌈 KIDS THEME CUSTOM COLORS
+     ============================================ */
+  /* Primary Colors */
+  --kids-pink: oklch(0.72 0.20 350);
+  --kids-purple: oklch(0.60 0.22 285);
+  --kids-blue: oklch(0.65 0.18 240);
+  --kids-teal: oklch(0.70 0.15 175);
+  --kids-green: oklch(0.72 0.18 145);
+  --kids-yellow: oklch(0.88 0.18 95);
+  --kids-orange: oklch(0.75 0.18 55);
+  --kids-coral: oklch(0.72 0.18 25);
+  
+  /* Soft Pastel Backgrounds */
+  --kids-pink-soft: oklch(0.95 0.04 350);
+  --kids-purple-soft: oklch(0.94 0.04 285);
+  --kids-blue-soft: oklch(0.94 0.04 240);
+  --kids-teal-soft: oklch(0.94 0.04 175);
+  --kids-green-soft: oklch(0.95 0.04 145);
+  --kids-yellow-soft: oklch(0.97 0.04 95);
+  --kids-orange-soft: oklch(0.95 0.04 55);
+  --kids-coral-soft: oklch(0.95 0.04 25);
+  
+  /* Gradient Colors */
+  --gradient-start: oklch(0.72 0.20 350);
+  --gradient-mid: oklch(0.65 0.22 285);
+  --gradient-end: oklch(0.65 0.18 240);
+  
+  /* Decorative */
+  --confetti-1: #FF6B6B;
+  --confetti-2: #4ECDC4;
+  --confetti-3: #FFE66D;
+  --confetti-4: #95E1D3;
+  --confetti-5: #F38181;
+  --confetti-6: #AA96DA;
 }
 
+/* ============================================
+   🌙 DARK MODE (Optional - Kids usually prefer light)
+   ============================================ */
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --background: oklch(0.18 0.02 280);
+  --foreground: oklch(0.95 0.01 280);
+  --card: oklch(0.22 0.025 280);
+  --card-foreground: oklch(0.95 0.01 280);
+  --popover: oklch(0.22 0.025 280);
+  --popover-foreground: oklch(0.95 0.01 280);
+  --primary: oklch(0.75 0.18 285);
+  --primary-foreground: oklch(0.18 0.02 280);
+  --secondary: oklch(0.75 0.15 55);
+  --secondary-foreground: oklch(0.18 0.02 280);
+  --muted: oklch(0.28 0.02 280);
+  --muted-foreground: oklch(0.70 0.02 280);
+  --accent: oklch(0.72 0.14 175);
+  --accent-foreground: oklch(0.18 0.02 280);
+  --destructive: oklch(0.55 0.20 25);
+  --destructive-foreground: oklch(0.95 0.01 25);
+  --border: oklch(0.30 0.02 280);
+  --input: oklch(0.28 0.02 280);
+  --ring: oklch(0.70 0.18 285);
+  --chart-1: oklch(0.72 0.20 340);
+  --chart-2: oklch(0.72 0.16 175);
+  --chart-3: oklch(0.70 0.18 285);
+  --chart-4: oklch(0.80 0.16 85);
+  --chart-5: oklch(0.74 0.18 145);
+  --sidebar: oklch(0.20 0.02 280);
+  --sidebar-foreground: oklch(0.95 0.01 280);
+  --sidebar-primary: oklch(0.75 0.18 285);
+  --sidebar-primary-foreground: oklch(0.18 0.02 280);
+  --sidebar-accent: oklch(0.28 0.02 280);
+  --sidebar-accent-foreground: oklch(0.95 0.01 280);
+  --sidebar-border: oklch(0.30 0.02 280);
+  --sidebar-ring: oklch(0.70 0.18 285);
 }
 
+/* ============================================
+   🎨 THEME CONFIGURATION
+   ============================================ */
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback';
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  /* Fonts - Playful & Readable */
+  --font-sans: 'Nunito', 'Geist', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback', monospace;
+  --font-heading: 'Fredoka', 'Nunito', 'Comic Sans MS', cursive;
   --font-satisfy: var(--font-satisfy);
+  --font-playful: 'Baloo 2', 'Fredoka', cursive;
+  
+  /* Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -102,10 +175,36 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
+  
+  /* Kids Colors */
+  --color-kids-pink: var(--kids-pink);
+  --color-kids-purple: var(--kids-purple);
+  --color-kids-blue: var(--kids-blue);
+  --color-kids-teal: var(--kids-teal);
+  --color-kids-green: var(--kids-green);
+  --color-kids-yellow: var(--kids-yellow);
+  --color-kids-orange: var(--kids-orange);
+  --color-kids-coral: var(--kids-coral);
+  
+  /* Soft Backgrounds */
+  --color-kids-pink-soft: var(--kids-pink-soft);
+  --color-kids-purple-soft: var(--kids-purple-soft);
+  --color-kids-blue-soft: var(--kids-blue-soft);
+  --color-kids-teal-soft: var(--kids-teal-soft);
+  --color-kids-green-soft: var(--kids-green-soft);
+  --color-kids-yellow-soft: var(--kids-yellow-soft);
+  --color-kids-orange-soft: var(--kids-orange-soft);
+  --color-kids-coral-soft: var(--kids-coral-soft);
+  
+  /* Enhanced Radius */
+  --radius-sm: calc(var(--radius) - 6px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+  --radius-2xl: calc(var(--radius) + 16px);
+  --radius-full: 9999px;
+  
+  /* Sidebar */
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -116,29 +215,1111 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* ============================================
+   🏗️ BASE STYLES
+   ============================================ */
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     @apply bg-background text-foreground;
+    font-family: 'Nunito', 'Geist', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  /* Headings with playful font */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fredoka', 'Nunito', cursive;
+    font-weight: 600;
+  }
+  
+  /* Make images more playful */
+  img {
+    border-radius: var(--radius);
+  }
+  
+  /* Selection color */
+  ::selection {
+    background: var(--kids-yellow);
+    color: var(--foreground);
+  }
+  
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--kids-purple-soft);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--kids-pink), var(--kids-purple));
+    border-radius: 10px;
+    border: 2px solid var(--kids-purple-soft);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--kids-purple), var(--kids-blue));
   }
 }
 
+/* ============================================
+   ✨ KEYFRAME ANIMATIONS
+   ============================================ */
+
 /* Floating animation */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
-}
-.animate-float {
-  animation: float 4s ease-in-out infinite;
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-8px) rotate(1deg); }
+  50% { transform: translateY(-15px) rotate(0deg); }
+  75% { transform: translateY(-8px) rotate(-1deg); }
 }
 
 /* Soft bounce */
 @keyframes bounceSlow {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-10px); }
 }
+
+/* Wiggle animation */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+/* Jelly bounce */
+@keyframes jelly {
+  0%, 100% { transform: scale(1, 1); }
+  25% { transform: scale(0.95, 1.05); }
+  50% { transform: scale(1.05, 0.95); }
+  75% { transform: scale(0.98, 1.02); }
+}
+
+/* Pop in animation */
+@keyframes popIn {
+  0% { 
+    transform: scale(0.5); 
+    opacity: 0; 
+  }
+  50% { 
+    transform: scale(1.1); 
+  }
+  100% { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+}
+
+/* Pop in with rotation */
+@keyframes popInRotate {
+  0% { 
+    transform: scale(0.5) rotate(-10deg); 
+    opacity: 0; 
+  }
+  60% { 
+    transform: scale(1.1) rotate(3deg); 
+  }
+  100% { 
+    transform: scale(1) rotate(0deg); 
+    opacity: 1; 
+  }
+}
+
+/* Slide up fade */
+@keyframes slideUpFade {
+  0% { 
+    transform: translateY(30px); 
+    opacity: 0; 
+  }
+  100% { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+  0% { 
+    transform: translateX(-50px); 
+    opacity: 0; 
+  }
+  100% { 
+    transform: translateX(0); 
+    opacity: 1; 
+  }
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+  0% { 
+    transform: translateX(50px); 
+    opacity: 0; 
+  }
+  100% { 
+    transform: translateX(0); 
+    opacity: 1; 
+  }
+}
+
+/* Rainbow border */
+@keyframes rainbowBorder {
+  0% { border-color: var(--confetti-1); }
+  20% { border-color: var(--confetti-2); }
+  40% { border-color: var(--confetti-3); }
+  60% { border-color: var(--confetti-4); }
+  80% { border-color: var(--confetti-5); }
+  100% { border-color: var(--confetti-1); }
+}
+
+/* Rainbow background shift */
+@keyframes rainbowShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Bubble float */
+@keyframes bubbleFloat {
+  0%, 100% { 
+    transform: translateY(0) scale(1); 
+    opacity: 0.7;
+  }
+  50% { 
+    transform: translateY(-25px) scale(1.1); 
+    opacity: 1;
+  }
+}
+
+/* Spin slow */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Pulse glow */
+@keyframes pulseGlow {
+  0%, 100% { 
+    box-shadow: 0 0 5px var(--kids-pink), 
+                0 0 10px var(--kids-purple), 
+                0 0 15px var(--kids-blue); 
+  }
+  50% { 
+    box-shadow: 0 0 10px var(--kids-pink), 
+                0 0 20px var(--kids-purple), 
+                0 0 30px var(--kids-blue); 
+  }
+}
+
+/* Heartbeat */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  10% { transform: scale(1.1); }
+  20% { transform: scale(1); }
+  30% { transform: scale(1.1); }
+  40% { transform: scale(1); }
+}
+
+/* Swing */
+@keyframes swing {
+  0%, 100% { transform: rotate(0deg); transform-origin: top center; }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-15deg); }
+}
+
+/* Bounce in */
+@keyframes bounceIn {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.2); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Confetti fall */
+@keyframes confettiFall {
+  0% { 
+    transform: translateY(-100%) rotate(0deg); 
+    opacity: 1;
+  }
+  100% { 
+    transform: translateY(100vh) rotate(720deg); 
+    opacity: 0;
+  }
+}
+
+/* Wave */
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-5px); }
+  75% { transform: translateY(5px); }
+}
+
+/* Sparkle */
+@keyframes sparkle {
+  0%, 100% { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+  50% { 
+    opacity: 0.5; 
+    transform: scale(0.8); 
+  }
+}
+
+/* Tada */
+@keyframes tada {
+  0% { transform: scale(1) rotate(0deg); }
+  10%, 20% { transform: scale(0.9) rotate(-3deg); }
+  30%, 50%, 70%, 90% { transform: scale(1.1) rotate(3deg); }
+  40%, 60%, 80% { transform: scale(1.1) rotate(-3deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* Shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Morph blob */
+@keyframes morphBlob {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  25% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  50% { border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%; }
+  75% { border-radius: 60% 40% 60% 30% / 70% 30% 50% 60%; }
+}
+
+/* Gradient flow */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ============================================
+   🎯 ANIMATION UTILITY CLASSES
+   ============================================ */
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: float 2.5s ease-in-out infinite;
+}
+
 .animate-bounceSlow {
   animation: bounceSlow 3s ease-in-out infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+.animate-wiggle-slow {
+  animation: wiggle 2s ease-in-out infinite;
+}
+
+.animate-jelly {
+  animation: jelly 0.5s ease-in-out;
+}
+
+.animate-pop-in {
+  animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.animate-pop-in-rotate {
+  animation: popInRotate 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.animate-slide-up {
+  animation: slideUpFade 0.6s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+.animate-rainbow-border {
+  animation: rainbowBorder 3s linear infinite;
+}
+
+.animate-bubble {
+  animation: bubbleFloat 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 8s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.animate-heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.animate-swing {
+  animation: swing 2s ease-in-out infinite;
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.animate-confetti {
+  animation: confettiFall 3s linear forwards;
+}
+
+.animate-wave {
+  animation: wave 2s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+.animate-tada {
+  animation: tada 1s ease-in-out;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-morph {
+  animation: morphBlob 8s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientFlow 4s ease infinite;
+}
+
+/* Animation delays */
+.animation-delay-100 { animation-delay: 100ms; }
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-300 { animation-delay: 300ms; }
+.animation-delay-400 { animation-delay: 400ms; }
+.animation-delay-500 { animation-delay: 500ms; }
+.animation-delay-700 { animation-delay: 700ms; }
+.animation-delay-1000 { animation-delay: 1000ms; }
+
+/* ============================================
+   🎪 COMPONENT STYLES
+   ============================================ */
+
+/* -------- CARDS -------- */
+.kids-card {
+  @apply relative overflow-hidden rounded-3xl bg-card p-6 transition-all duration-500;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+.kids-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  padding: 3px;
+  background: linear-gradient(135deg, var(--kids-pink), var(--kids-purple), var(--kids-blue), var(--kids-teal));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.kids-card:hover::before {
+  opacity: 1;
+}
+
+.kids-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px -15px rgba(0, 0, 0, 0.1),
+    0 0 0 1px var(--kids-purple-soft);
+}
+
+/* Service Card Specific */
+.service-card {
+  @apply relative overflow-hidden rounded-3xl bg-card transition-all duration-500 cursor-pointer;
+  border: 2px solid var(--border);
+}
+
+.service-card:hover {
+  transform: translateY(-12px) rotate(1deg);
+  border-color: transparent;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.2) 50%, transparent 60%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.service-card:hover::after {
+  transform: translateX(100%);
+}
+
+/* Card with blob background */
+.blob-card {
+  @apply relative overflow-hidden rounded-3xl;
+}
+
+.blob-card::before {
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: -25%;
+  left: -25%;
+  background: radial-gradient(circle, var(--kids-pink-soft) 0%, transparent 70%);
+  animation: morphBlob 15s ease-in-out infinite;
+  z-index: -1;
+}
+
+/* -------- BUTTONS -------- */
+.kids-button {
+  @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-bold rounded-full transition-all duration-300;
+  background: linear-gradient(135deg, var(--kids-purple), var(--kids-blue));
+  color: white;
+  border: none;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.kids-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.kids-button:hover::before {
+  left: 100%;
+}
+
+.kids-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.kids-button:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* Button variants */
+.kids-button-pink {
+  background: linear-gradient(135deg, var(--kids-pink), var(--kids-coral));
+}
+
+.kids-button-green {
+  background: linear-gradient(135deg, var(--kids-green), var(--kids-teal));
+}
+
+.kids-button-orange {
+  background: linear-gradient(135deg, var(--kids-orange), var(--kids-yellow));
+  color: var(--foreground);
+}
+
+.kids-button-outline {
+  background: transparent;
+  border: 3px solid var(--kids-purple);
+  color: var(--kids-purple);
+}
+
+.kids-button-outline:hover {
+  background: var(--kids-purple);
+  color: white;
+}
+
+/* Bouncy button */
+.bouncy-button {
+  @apply relative px-8 py-4 rounded-full font-bold text-white;
+  background: linear-gradient(135deg, var(--kids-purple), var(--kids-pink));
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.bouncy-button:hover {
+  animation: jelly 0.5s ease;
+  transform: scale(1.1);
+}
+
+/* -------- ICONS -------- */
+.icon-wrapper {
+  @apply relative flex items-center justify-center rounded-2xl p-4 transition-all duration-300;
+}
+
+.icon-wrapper:hover {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+.icon-blob {
+  @apply relative flex items-center justify-center w-20 h-20;
+  animation: morphBlob 8s ease-in-out infinite;
+}
+
+.icon-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* -------- BADGES -------- */
+.kids-badge {
+  @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-semibold;
+  background: linear-gradient(135deg, var(--kids-yellow-soft), var(--kids-orange-soft));
+  border: 2px dashed var(--kids-orange);
+}
+
+.kids-badge-pink {
+  background: linear-gradient(135deg, var(--kids-pink-soft), var(--kids-coral-soft));
+  border-color: var(--kids-pink);
+}
+
+.kids-badge-blue {
+  background: linear-gradient(135deg, var(--kids-blue-soft), var(--kids-purple-soft));
+  border-color: var(--kids-blue);
+}
+
+.kids-badge-green {
+  background: linear-gradient(135deg, var(--kids-green-soft), var(--kids-teal-soft));
+  border-color: var(--kids-green);
+}
+
+/* -------- SECTIONS -------- */
+.section-wavy {
+  position: relative;
+}
+
+.section-wavy::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23fef3c7'/%3E%3C/svg%3E") no-repeat;
+  background-size: cover;
+}
+
+/* -------- DECORATIVE SHAPES -------- */
+.deco-circle {
+  @apply absolute rounded-full opacity-60;
+  background: linear-gradient(135deg, var(--kids-pink-soft), var(--kids-purple-soft));
+}
+
+.deco-blob {
+  @apply absolute;
+  animation: morphBlob 10s ease-in-out infinite;
+  background: linear-gradient(135deg, var(--kids-blue-soft), var(--kids-teal-soft));
+  opacity: 0.5;
+}
+
+.deco-star {
+  @apply absolute;
+  animation: sparkle 2s ease-in-out infinite, float 4s ease-in-out infinite;
+}
+
+.deco-dots-pattern {
+  background-image: radial-gradient(var(--kids-purple-soft) 2px, transparent 2px);
+  background-size: 20px 20px;
+}
+
+/* ============================================
+   🌈 GRADIENT UTILITIES
+   ============================================ */
+.gradient-rainbow {
+  background: linear-gradient(135deg, 
+    var(--kids-pink), 
+    var(--kids-purple), 
+    var(--kids-blue), 
+    var(--kids-teal), 
+    var(--kids-green)
+  );
+}
+
+.gradient-sunset {
+  background: linear-gradient(135deg, var(--kids-pink), var(--kids-orange), var(--kids-yellow));
+}
+
+.gradient-ocean {
+  background: linear-gradient(135deg, var(--kids-blue), var(--kids-teal), var(--kids-green));
+}
+
+.gradient-candy {
+  background: linear-gradient(135deg, var(--kids-pink), var(--kids-purple));
+}
+
+.gradient-sunshine {
+  background: linear-gradient(135deg, var(--kids-yellow), var(--kids-orange));
+}
+
+.gradient-forest {
+  background: linear-gradient(135deg, var(--kids-green), var(--kids-teal));
+}
+
+.gradient-soft-rainbow {
+  background: linear-gradient(135deg, 
+    var(--kids-pink-soft), 
+    var(--kids-purple-soft), 
+    var(--kids-blue-soft), 
+    var(--kids-teal-soft)
+  );
+}
+
+/* Text gradients */
+.text-gradient-rainbow {
+  background: linear-gradient(135deg, 
+    var(--kids-pink), 
+    var(--kids-purple), 
+    var(--kids-blue), 
+    var(--kids-teal)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-sunset {
+  background: linear-gradient(135deg, var(--kids-pink), var(--kids-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-candy {
+  background: linear-gradient(135deg, var(--kids-pink), var(--kids-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gradients */
+.gradient-animated {
+  background: linear-gradient(270deg, 
+    var(--kids-pink), 
+    var(--kids-purple), 
+    var(--kids-blue), 
+    var(--kids-teal),
+    var(--kids-pink)
+  );
+  background-size: 400% 400%;
+  animation: gradientFlow 8s ease infinite;
+}
+
+/* ============================================
+   🎭 HOVER EFFECTS
+   ============================================ */
+.hover-lift {
+  @apply transition-all duration-300;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+}
+
+.hover-scale {
+  @apply transition-transform duration-300;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-rotate {
+  @apply transition-transform duration-300;
+}
+
+.hover-rotate:hover {
+  transform: rotate(5deg);
+}
+
+.hover-wiggle:hover {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+.hover-bounce:hover {
+  animation: bounceSlow 0.6s ease-in-out;
+}
+
+.hover-jelly:hover {
+  animation: jelly 0.5s ease;
+}
+
+.hover-glow {
+  @apply transition-all duration-300;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px var(--kids-purple);
+}
+
+.hover-rainbow:hover {
+  animation: rainbowBorder 2s linear infinite;
+  border-width: 3px;
+}
+
+/* ============================================
+   🖼️ BACKGROUND PATTERNS
+   ============================================ */
+.bg-dots {
+  background-image: radial-gradient(circle, var(--kids-purple-soft) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-dots-large {
+  background-image: radial-gradient(circle, var(--kids-purple-soft) 3px, transparent 3px);
+  background-size: 40px 40px;
+}
+
+.bg-grid {
+  background-image: 
+    linear-gradient(var(--kids-purple-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--kids-purple-soft) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.bg-zigzag {
+  background: 
+    linear-gradient(135deg, var(--kids-pink-soft) 25%, transparent 25%) -20px 0,
+    linear-gradient(225deg, var(--kids-pink-soft) 25%, transparent 25%) -20px 0,
+    linear-gradient(315deg, var(--kids-pink-soft) 25%, transparent 25%),
+    linear-gradient(45deg, var(--kids-pink-soft) 25%, transparent 25%);
+  background-size: 40px 40px;
+}
+
+.bg-confetti {
+  background-image: 
+    radial-gradient(circle at 20% 30%, var(--confetti-1) 2px, transparent 2px),
+    radial-gradient(circle at 40% 70%, var(--confetti-2) 2px, transparent 2px),
+    radial-gradient(circle at 60% 20%, var(--confetti-3) 2px, transparent 2px),
+    radial-gradient(circle at 80% 50%, var(--confetti-4) 2px, transparent 2px),
+    radial-gradient(circle at 10% 80%, var(--confetti-5) 2px, transparent 2px),
+    radial-gradient(circle at 90% 90%, var(--confetti-6) 2px, transparent 2px);
+  background-size: 100px 100px;
+}
+
+.bg-bubbles {
+  background-image: 
+    radial-gradient(circle at 25% 25%, var(--kids-blue-soft) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, var(--kids-pink-soft) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, var(--kids-purple-soft) 0%, transparent 50%);
+}
+
+/* ============================================
+   📝 TYPOGRAPHY STYLES
+   ============================================ */
+.heading-playful {
+  font-family: 'Fredoka', 'Nunito', cursive;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.heading-fun {
+  font-family: 'Baloo 2', 'Fredoka', cursive;
+  font-weight: 700;
+}
+
+.text-shadow-playful {
+  text-shadow: 
+    3px 3px 0 var(--kids-pink),
+    6px 6px 0 rgba(0,0,0,0.1);
+}
+
+.text-shadow-soft {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-outline {
+  -webkit-text-stroke: 2px var(--kids-purple);
+  color: white;
+}
+
+/* ============================================
+   🎠 SERVICE SPECIFIC COLORS
+   ============================================ */
+/* Dance - Pink */
+.service-dance { --service-color: var(--kids-pink); --service-soft: var(--kids-pink-soft); }
+.service-dance .icon-wrapper { background: var(--kids-pink-soft); }
+.service-dance:hover { border-color: var(--kids-pink); }
+
+/* Martial Arts Instructor - Blue */
+.service-martial-instructor { --service-color: var(--kids-blue); --service-soft: var(--kids-blue-soft); }
+.service-martial-instructor .icon-wrapper { background: var(--kids-blue-soft); }
+.service-martial-instructor:hover { border-color: var(--kids-blue); }
+
+/* Music Therapy - Purple */
+.service-music { --service-color: var(--kids-purple); --service-soft: var(--kids-purple-soft); }
+.service-music .icon-wrapper { background: var(--kids-purple-soft); }
+.service-music:hover { border-color: var(--kids-purple); }
+
+/* Kids Yoga - Teal */
+.service-yoga { --service-color: var(--kids-teal); --service-soft: var(--kids-teal-soft); }
+.service-yoga .icon-wrapper { background: var(--kids-teal-soft); }
+.service-yoga:hover { border-color: var(--kids-teal); }
+
+/* Martial Arts - Orange */
+.service-martial { --service-color: var(--kids-orange); --service-soft: var(--kids-orange-soft); }
+.service-martial .icon-wrapper { background: var(--kids-orange-soft); }
+.service-martial:hover { border-color: var(--kids-orange); }
+
+/* Nutrition - Green */
+.service-nutrition { --service-color: var(--kids-green); --service-soft: var(--kids-green-soft); }
+.service-nutrition .icon-wrapper { background: var(--kids-green-soft); }
+.service-nutrition:hover { border-color: var(--kids-green); }
+
+/* ============================================
+   🎨 SPECIAL EFFECTS
+   ============================================ */
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Neumorphism */
+.neu-raised {
+  background: var(--background);
+  box-shadow: 
+    8px 8px 16px rgba(0, 0, 0, 0.1),
+    -8px -8px 16px rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-xl);
+}
+
+.neu-pressed {
+  background: var(--background);
+  box-shadow: 
+    inset 4px 4px 8px rgba(0, 0, 0, 0.1),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-xl);
+}
+
+/* Glow effects */
+.glow-pink {
+  box-shadow: 0 0 20px var(--kids-pink), 0 0 40px var(--kids-pink-soft);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px var(--kids-purple), 0 0 40px var(--kids-purple-soft);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px var(--kids-blue), 0 0 40px var(--kids-blue-soft);
+}
+
+.glow-rainbow {
+  box-shadow: 
+    0 0 10px var(--kids-pink),
+    0 0 20px var(--kids-purple),
+    0 0 30px var(--kids-blue),
+    0 0 40px var(--kids-teal);
+}
+
+/* ============================================
+   🎪 FLOATING DECORATIONS
+   ============================================ */
+.floating-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.floating-shapes .shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.shape-1 {
+  width: 60px;
+  height: 60px;
+  background: var(--kids-pink-soft);
+  top: 10%;
+  left: 10%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.shape-2 {
+  width: 40px;
+  height: 40px;
+  background: var(--kids-blue-soft);
+  top: 20%;
+  right: 15%;
+  animation: float 5s ease-in-out infinite 0.5s;
+}
+
+.shape-3 {
+  width: 80px;
+  height: 80px;
+  background: var(--kids-purple-soft);
+  bottom: 20%;
+  left: 20%;
+  animation: float 7s ease-in-out infinite 1s;
+}
+
+.shape-4 {
+  width: 30px;
+  height: 30px;
+  background: var(--kids-yellow-soft);
+  bottom: 30%;
+  right: 10%;
+  animation: float 4s ease-in-out infinite 1.5s;
+}
+
+.shape-5 {
+  width: 50px;
+  height: 50px;
+  background: var(--kids-teal-soft);
+  top: 50%;
+  left: 5%;
+  animation: float 5.5s ease-in-out infinite 0.8s;
+}
+
+/* ============================================
+   📱 RESPONSIVE ADJUSTMENTS
+   ============================================ */
+@media (max-width: 768px) {
+  :root {
+    --radius: 1rem;
+  }
+  
+  .kids-card {
+    @apply p-4 rounded-2xl;
+  }
+  
+  .kids-button {
+    @apply px-4 py-2 text-sm;
+  }
+  
+  .floating-shapes .shape {
+    transform: scale(0.7);
+  }
+}
+
+/* ============================================
+   ♿ ACCESSIBILITY - Reduced Motion
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .floating-shapes {
+    display: none;
+  }
+}
+
+/* ============================================
+   🌟 UTILITY CLASSES
+   ============================================ */
+/* Z-index utilities */
+.z-behind { z-index: -1; }
+.z-base { z-index: 0; }
+.z-above { z-index: 10; }
+.z-modal { z-index: 50; }
+.z-top { z-index: 100; }
+
+/* Clip paths */
+.clip-wave {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.clip-wave-reverse {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+}
+
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+
+/* Hide scrollbar but allow scroll */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Fade In Up Animation for Mobile Menu */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.3s ease-out forwards;
+}
+
+/* Slide in from right for mobile menu items */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideInLeft {
+  animation: slideInFromLeft 0.3s ease-out forwards;
 }
