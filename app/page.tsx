@@ -225,7 +225,7 @@ export default function Home() {
       </section>
 
       {/* ================= STATS SECTION ================= */}
-      <section className="relative z-10 bg-[#10B981] py-16 md:py-20 -mt-1">
+      <section className="relative z-10 bg-[#10B981] py-16 md:py-20 -mt-10 pt-24 md:pt-32">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {stats.map((stat, i) => (

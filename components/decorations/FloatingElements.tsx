@@ -169,7 +169,7 @@ export const WaveDivider = ({
     <div className={`w-full leading-none ${flip ? 'rotate-180' : ''} ${className}`}>
       <svg 
         viewBox="0 0 1440 120" 
-        className="w-full h-[80px] md:h-[120px]" 
+        className="w-[102%] -ml-[1%] h-[80px] md:h-[120px]" 
         preserveAspectRatio="none"
       >
         <path
