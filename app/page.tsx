@@ -382,7 +382,7 @@ export default function Home() {
               {/* Main Image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-purple-200/50">
                 <Image
-                  src="/about.jpg"
+                  src="https://placehold.net/default.png"
                   alt="Happy kids in therapy session"
                   width={600}
                   height={500}
@@ -522,7 +522,7 @@ export default function Home() {
                 {/* Hexagon Container */}
                 <div className="relative w-full h-full overflow-hidden rounded-2xl transform rotate-0 group-hover:rotate-6 transition-transform duration-500">
                   <Image
-                    src={`/team${i}.jpg`}
+                    src="https://placehold.net/default.png"
                     alt={`Team member ${i}`}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"

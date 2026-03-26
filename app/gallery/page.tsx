@@ -48,7 +48,7 @@ export default function Gallery() {
     { 
       id: 1, 
       title: 'Dance Class Fun', 
-      image: '/gallery/dance-1.jpg', 
+      image: 'https://placehold.net/default.png', 
       category: 'activities',
       color: 'from-pink-400 to-rose-500',
       emoji: '💃'
@@ -56,7 +56,7 @@ export default function Gallery() {
     { 
       id: 2, 
       title: 'Music Therapy Session', 
-      image: '/gallery/music-1.jpg', 
+      image: 'https://placehold.net/default.png', 
       category: 'sessions',
       color: 'from-purple-400 to-violet-500',
       emoji: '🎵'
@@ -64,7 +64,7 @@ export default function Gallery() {
     { 
       id: 3, 
       title: 'Yoga for Kids', 
-      image: '/gallery/yoga-1.jpg', 
+      image: 'https://placehold.net/default.png', 
       category: 'sessions',
       color: 'from-teal-400 to-cyan-500',
       emoji: '🧘'
@@ -72,7 +72,7 @@ export default function Gallery() {
     { 
       id: 4, 
       title: 'Art & Craft Day', 
-      image: '/gallery/art-1.jpg', 
+      image: 'https://placehold.net/default.png', 
       category: 'activities',
       color: 'from-orange-400 to-amber-500',
       emoji: '🎨'
@@ -80,7 +80,7 @@ export default function Gallery() {
     { 
       id: 5, 
       title: 'Annual Day Celebration', 
-      image: '/gallery/event-1.jpg', 
+      image: 'https://placehold.net/default.png', 
       category: 'events',
       color: 'from-yellow-400 to-orange-500',
       emoji: '🎉'
@@ -88,7 +88,7 @@ export default function Gallery() {
     { 
       id: 6, 
       title: 'Martial Arts Training', 
-      image: '/gallery/martial-1.jpg', 
+      image: 'https://placehold.net/default.png', 
       category: 'sessions',
       color: 'from-red-400 to-orange-500',
       emoji: '🥋'
@@ -96,7 +96,7 @@ export default function Gallery() {
     { 
       id: 7, 
       title: 'Emma\'s Progress', 
-      image: '/gallery/success-1.jpg', 
+      image: 'https://placehold.net/default.png', 
       category: 'success',
       color: 'from-green-400 to-emerald-500',
       emoji: '🌟'
@@ -104,7 +104,7 @@ export default function Gallery() {
     { 
       id: 8, 
       title: 'Group Activity Time', 
-      image: '/gallery/activity-1.jpg', 
+      image: 'https://placehold.net/default.png', 
       category: 'activities',
       color: 'from-blue-400 to-cyan-500',
       emoji: '👫'
@@ -112,7 +112,7 @@ export default function Gallery() {
     { 
       id: 9, 
       title: 'Birthday Celebrations', 
-      image: '/gallery/event-2.jpg', 
+      image: 'https://placehold.net/default.png', 
       category: 'events',
       color: 'from-pink-400 to-purple-500',
       emoji: '🎂'
@@ -120,7 +120,7 @@ export default function Gallery() {
     { 
       id: 10, 
       title: 'Nutrition Workshop', 
-      image: '/gallery/nutrition-1.jpg', 
+      image: 'https://placehold.net/default.png', 
       category: 'sessions',
       color: 'from-green-400 to-teal-500',
       emoji: '🥗'
@@ -128,7 +128,7 @@ export default function Gallery() {
     { 
       id: 11, 
       title: 'Noah\'s Achievement', 
-      image: '/gallery/success-2.jpg', 
+      image: 'https://placehold.net/default.png', 
       category: 'success',
       color: 'from-yellow-400 to-amber-500',
       emoji: '🏆'
@@ -136,7 +136,7 @@ export default function Gallery() {
     { 
       id: 12, 
       title: 'Sports Day Fun', 
-      image: '/gallery/event-3.jpg', 
+      image: 'https://placehold.net/default.png', 
       category: 'events',
       color: 'from-cyan-400 to-blue-500',
       emoji: '🏃'
@@ -373,12 +373,12 @@ export default function Gallery() {
                     </div>
                     
                     {/* Actual Image (uncomment when you have images) */}
-                    {/* <Image
+                    <Image
                       src={item.image}
                       alt={item.title}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
-                    /> */}
+                    />
                     
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
@@ -455,12 +455,12 @@ export default function Gallery() {
               <span className="text-9xl">{filteredItems[currentImageIndex]?.emoji}</span>
               
               {/* Actual Image (uncomment when you have images) */}
-              {/* <Image
+              <Image
                 src={filteredItems[currentImageIndex]?.image}
                 alt={filteredItems[currentImageIndex]?.title}
                 fill
                 className="object-contain"
-              /> */}
+              />
             </div>
 
             {/* Image Info */}

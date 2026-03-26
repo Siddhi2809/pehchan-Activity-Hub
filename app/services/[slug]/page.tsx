@@ -239,12 +239,12 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
                   <div className={`absolute inset-0 bg-gradient-to-tr ${extras.gradient} opacity-10`}></div>
                   
                   {/* Actual Image (uncomment when you have images) */}
-                  {/* <Image
-                    src={`/services/${slug}.jpg`}
+                  <Image
+                    src="https://placehold.net/default.png"
                     alt={service.title}
                     fill
                     className="object-cover"
-                  /> */}
+                  />
                 </div>
 
                 {/* Floating Badge - Rating */}
@@ -434,12 +434,12 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
                   <User size={80} className={service.iconColor} />
                   
                   {/* Actual Image (uncomment when you have images) */}
-                  {/* <Image
-                    src={`/trainers/${service.trainer.toLowerCase().replace(' ', '-')}.jpg`}
+                  <Image
+                    src="https://placehold.net/default.png"
                     alt={service.trainer}
                     fill
                     className="object-cover"
-                  /> */}
+                  />
                 </div>
                 
                 {/* Verified Badge */}

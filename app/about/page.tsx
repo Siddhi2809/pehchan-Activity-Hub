@@ -50,7 +50,7 @@ export default function About() {
       name: 'Mithali Bhadange',
       role: 'Dance Class Trainer',
       description: 'Expert in rhythmic movement and creative expression for young children.',
-      image: '/team1.jpg',
+      image: 'https://placehold.net/default.png',
       icon: Music,
       color: 'from-pink-400 to-rose-500',
       borderColor: 'border-pink-200',
@@ -64,7 +64,7 @@ export default function About() {
       name: 'Tushar Sawane',
       role: 'Martial Arts Instructor',
       description: 'Specializes in teaching discipline, focus, and strength through martial arts.',
-      image: '/team2.jpg',
+      image: 'https://placehold.net/default.png',
       icon: Shield,
       color: 'from-orange-400 to-amber-500',
       borderColor: 'border-orange-200',
@@ -78,7 +78,7 @@ export default function About() {
       name: 'Pratik Lohakare',
       role: 'Music Therapy Instructor',
       description: 'Uses music and melody to support emotional and cognitive child development.',
-      image: '/team3.jpg',
+      image: 'https://placehold.net/default.png',
       icon: Sparkles,
       color: 'from-purple-400 to-violet-500',
       borderColor: 'border-purple-200',
@@ -92,7 +92,7 @@ export default function About() {
       name: 'Machendra',
       role: 'Kids Yoga Trainer',
       description: 'Focuses on mindfulness, flexibility, and peaceful body awareness for children.',
-      image: '/team4.jpg',
+      image: 'https://placehold.net/default.png',
       icon: Flower2,
       color: 'from-teal-400 to-cyan-500',
       borderColor: 'border-teal-200',
@@ -106,7 +106,7 @@ export default function About() {
       name: 'Vaishnavi Dahake',
       role: 'Child Nutritionist & Dietician',
       description: 'Expert nutritional guidance for healthy growth and balanced eating habits.',
-      image: '/team5.jpg',
+      image: 'https://placehold.net/default.png',
       icon: Apple,
       color: 'from-green-400 to-emerald-500',
       borderColor: 'border-green-200',
@@ -357,7 +357,7 @@ export default function About() {
                   {/* Gradient Background (replace with actual image) */}
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-400 via-pink-400 to-orange-400">
                     <Image
-                      src="/founder.jpg"
+                      src="https://placehold.net/default.png"
                       alt="Dr. Asmita Shirsat"
                       fill
                       className="object-cover"
