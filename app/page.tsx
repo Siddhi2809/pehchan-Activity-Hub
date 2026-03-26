@@ -105,7 +105,7 @@ export default function Home() {
       <Navbar />
       
       {/* ================= HERO SECTION ================= */}
-      <section className="relative min-h-[600px] md:min-h-[700px] flex items-center overflow-hidden pt-6">
+      <section className="relative z-20 min-h-[600px] md:min-h-[700px] flex items-center pt-6">
         
         {/* Background Decorations */}
         <div className="absolute inset-0 z-0">
@@ -225,7 +225,7 @@ export default function Home() {
       </section>
 
       {/* ================= STATS SECTION ================= */}
-      <section className="relative bg-[#10B981] py-16 md:py-20 -mt-1 shadow-inner">
+      <section className="relative z-10 bg-[#10B981] py-16 md:py-20 -mt-1">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {stats.map((stat, i) => (
