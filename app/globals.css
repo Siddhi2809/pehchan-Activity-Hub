@@ -4,139 +4,138 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ============================================
-   🎨 KID-FRIENDLY COLOR PALETTE
+   🎨 PREMIUM KIDS THERAPY COLOR PALETTE
    ============================================ */
 :root {
-  /* Main backgrounds - warm & inviting */
-  --background: oklch(0.98 0.015 85);
-  --foreground: oklch(0.25 0.03 280);
+  /* ===== NEW PREMIUM PALETTE ===== */
+  --sky-blue: #6EC1E4;
+  --soft-yellow: #FFD166;
+  --mint-green: #95E1D3;
+  --coral-light: #FF8C94;
+  --cream-bg: #FFF7E6;
   
-  /* Cards - soft white with warmth */
-  --card: oklch(0.995 0.008 90);
-  --card-foreground: oklch(0.25 0.03 280);
+  /* Supporting Neutrals */
+  --dark-text: #2D3436;
+  --medium-text: #636E72;
+  --light-text: #B2BEC3;
+  --white: #FFFFFF;
+  --subtle-border: #E8E8E8;
+  
+  /* Main backgrounds - warm cream base */
+  --background: oklch(0.98 0.01 75);
+  --foreground: oklch(0.20 0.01 240);
+  
+  /* Cards - clean white */
+  --card: oklch(0.99 0 0);
+  --card-foreground: oklch(0.20 0.01 240);
   
   /* Popover */
-  --popover: oklch(0.995 0.008 90);
-  --popover-foreground: oklch(0.25 0.03 280);
+  --popover: oklch(0.99 0 0);
+  --popover-foreground: oklch(0.20 0.01 240);
   
-  /* Primary - Vibrant Purple */
-  --primary: oklch(0.60 0.22 285);
+  /* Primary - Sky Blue */
+  --primary: oklch(0.72 0.12 215);
   --primary-foreground: oklch(0.99 0 0);
   
-  /* Secondary - Sunny Orange */
-  --secondary: oklch(0.72 0.18 55);
-  --secondary-foreground: oklch(0.20 0.02 50);
+  /* Secondary - Mint Green */
+  --secondary: oklch(0.82 0.09 165);
+  --secondary-foreground: oklch(0.20 0.01 240);
   
-  /* Accent - Playful Teal */
-  --accent: oklch(0.70 0.15 175);
-  --accent-foreground: oklch(0.99 0 0);
+  /* Accent - Soft Yellow */
+  --accent: oklch(0.88 0.12 85);
+  --accent-foreground: oklch(0.20 0.01 240);
   
-  /* Muted - Soft lavender */
-  --muted: oklch(0.94 0.02 290);
-  --muted-foreground: oklch(0.50 0.03 280);
+  /* Muted - Soft cream */
+  --muted: oklch(0.96 0.01 75);
+  --muted-foreground: oklch(0.45 0.01 240);
   
-  /* Destructive */
-  --destructive: oklch(0.60 0.22 25);
-  --destructive-foreground: oklch(0.98 0.01 25);
+  /* Destructive - Gentle coral */
+  --destructive: oklch(0.68 0.15 15);
+  --destructive-foreground: oklch(0.98 0.01 15);
   
-  /* Borders & Inputs - Soft and rounded feel */
-  --border: oklch(0.92 0.02 280);
-  --input: oklch(0.96 0.01 280);
-  --ring: oklch(0.65 0.20 285);
+  /* Borders & Inputs */
+  --border: oklch(0.92 0.005 75);
+  --input: oklch(0.96 0.005 75);
+  --ring: oklch(0.72 0.12 215);
   
-  /* Charts - Rainbow palette for kids */
-  --chart-1: oklch(0.68 0.22 340);  /* Pink */
-  --chart-2: oklch(0.70 0.18 175);  /* Teal */
-  --chart-3: oklch(0.65 0.20 285);  /* Purple */
-  --chart-4: oklch(0.78 0.18 85);   /* Yellow */
-  --chart-5: oklch(0.72 0.20 145);  /* Green */
+  /* Charts - Using palette colors */
+  --chart-1: oklch(0.72 0.12 215);  /* Sky Blue */
+  --chart-2: oklch(0.82 0.09 165);  /* Mint Green */
+  --chart-3: oklch(0.88 0.12 85);   /* Soft Yellow */
+  --chart-4: oklch(0.68 0.15 15);   /* Coral */
+  --chart-5: oklch(0.75 0.10 200);  /* Blue variant */
   
-  /* Increased radius for playfulness */
+  /* Refined radius */
   --radius: 1.25rem;
   
   /* Sidebar */
-  --sidebar: oklch(0.98 0.02 290);
-  --sidebar-foreground: oklch(0.25 0.03 280);
-  --sidebar-primary: oklch(0.60 0.22 285);
+  --sidebar: oklch(0.99 0 0);
+  --sidebar-foreground: oklch(0.20 0.01 240);
+  --sidebar-primary: oklch(0.72 0.12 215);
   --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(0.94 0.03 290);
-  --sidebar-accent-foreground: oklch(0.25 0.03 280);
-  --sidebar-border: oklch(0.90 0.02 280);
-  --sidebar-ring: oklch(0.65 0.20 285);
+  --sidebar-accent: oklch(0.96 0.01 75);
+  --sidebar-accent-foreground: oklch(0.20 0.01 240);
+  --sidebar-border: oklch(0.92 0.005 75);
+  --sidebar-ring: oklch(0.72 0.12 215);
 
   /* ============================================
-     🌈 KIDS THEME CUSTOM COLORS
+     🌈 PREMIUM THEME CUSTOM COLORS
      ============================================ */
-  /* Primary Colors */
-  --kids-pink: oklch(0.72 0.20 350);
-  --kids-purple: oklch(0.60 0.22 285);
-  --kids-blue: oklch(0.65 0.18 240);
-  --kids-teal: oklch(0.70 0.15 175);
-  --kids-green: oklch(0.72 0.18 145);
-  --kids-yellow: oklch(0.88 0.18 95);
-  --kids-orange: oklch(0.75 0.18 55);
-  --kids-coral: oklch(0.72 0.18 25);
+  /* Primary Palette */
+  --kids-sky-blue: #6EC1E4;
+  --kids-soft-yellow: #FFD166;
+  --kids-mint-green: #95E1D3;
+  --kids-coral: #FF8C94;
   
-  /* Soft Pastel Backgrounds */
-  --kids-pink-soft: oklch(0.95 0.04 350);
-  --kids-purple-soft: oklch(0.94 0.04 285);
-  --kids-blue-soft: oklch(0.94 0.04 240);
-  --kids-teal-soft: oklch(0.94 0.04 175);
-  --kids-green-soft: oklch(0.95 0.04 145);
-  --kids-yellow-soft: oklch(0.97 0.04 95);
-  --kids-orange-soft: oklch(0.95 0.04 55);
-  --kids-coral-soft: oklch(0.95 0.04 25);
+  /* Soft Backgrounds (10% opacity variants) */
+  --kids-sky-soft: #EBF7FC;
+  --kids-yellow-soft: #FFF8E5;
+  --kids-mint-soft: #F0FAF8;
+  --kids-coral-soft: #FFF0F1;
   
-  /* Gradient Colors */
-  --gradient-start: oklch(0.72 0.20 350);
-  --gradient-mid: oklch(0.65 0.22 285);
-  --gradient-end: oklch(0.65 0.18 240);
-  
-  /* Decorative */
-  --confetti-1: #FF6B6B;
-  --confetti-2: #4ECDC4;
-  --confetti-3: #FFE66D;
-  --confetti-4: #95E1D3;
-  --confetti-5: #F38181;
-  --confetti-6: #AA96DA;
+  /* Hover States (darker variants) */
+  --kids-sky-dark: #4DA8CE;
+  --kids-yellow-dark: #F5C04D;
+  --kids-mint-dark: #76CBBF;
+  --kids-coral-dark: #FF6B75;
 }
 
 /* ============================================
-   🌙 DARK MODE (Optional - Kids usually prefer light)
+   🌙 DARK MODE (Refined for kids)
    ============================================ */
 .dark {
-  --background: oklch(0.18 0.02 280);
-  --foreground: oklch(0.95 0.01 280);
-  --card: oklch(0.22 0.025 280);
-  --card-foreground: oklch(0.95 0.01 280);
-  --popover: oklch(0.22 0.025 280);
-  --popover-foreground: oklch(0.95 0.01 280);
-  --primary: oklch(0.75 0.18 285);
-  --primary-foreground: oklch(0.18 0.02 280);
-  --secondary: oklch(0.75 0.15 55);
-  --secondary-foreground: oklch(0.18 0.02 280);
-  --muted: oklch(0.28 0.02 280);
-  --muted-foreground: oklch(0.70 0.02 280);
-  --accent: oklch(0.72 0.14 175);
-  --accent-foreground: oklch(0.18 0.02 280);
-  --destructive: oklch(0.55 0.20 25);
-  --destructive-foreground: oklch(0.95 0.01 25);
-  --border: oklch(0.30 0.02 280);
-  --input: oklch(0.28 0.02 280);
-  --ring: oklch(0.70 0.18 285);
-  --chart-1: oklch(0.72 0.20 340);
-  --chart-2: oklch(0.72 0.16 175);
-  --chart-3: oklch(0.70 0.18 285);
-  --chart-4: oklch(0.80 0.16 85);
-  --chart-5: oklch(0.74 0.18 145);
-  --sidebar: oklch(0.20 0.02 280);
-  --sidebar-foreground: oklch(0.95 0.01 280);
-  --sidebar-primary: oklch(0.75 0.18 285);
-  --sidebar-primary-foreground: oklch(0.18 0.02 280);
-  --sidebar-accent: oklch(0.28 0.02 280);
-  --sidebar-accent-foreground: oklch(0.95 0.01 280);
-  --sidebar-border: oklch(0.30 0.02 280);
-  --sidebar-ring: oklch(0.70 0.18 285);
+  --background: oklch(0.18 0.01 240);
+  --foreground: oklch(0.95 0.005 240);
+  --card: oklch(0.22 0.015 240);
+  --card-foreground: oklch(0.95 0.005 240);
+  --popover: oklch(0.22 0.015 240);
+  --popover-foreground: oklch(0.95 0.005 240);
+  --primary: oklch(0.75 0.12 215);
+  --primary-foreground: oklch(0.18 0.01 240);
+  --secondary: oklch(0.82 0.09 165);
+  --secondary-foreground: oklch(0.18 0.01 240);
+  --muted: oklch(0.28 0.01 240);
+  --muted-foreground: oklch(0.70 0.005 240);
+  --accent: oklch(0.88 0.12 85);
+  --accent-foreground: oklch(0.18 0.01 240);
+  --destructive: oklch(0.68 0.15 15);
+  --destructive-foreground: oklch(0.95 0.005 15);
+  --border: oklch(0.30 0.01 240);
+  --input: oklch(0.28 0.01 240);
+  --ring: oklch(0.75 0.12 215);
+  --chart-1: oklch(0.72 0.12 215);
+  --chart-2: oklch(0.82 0.09 165);
+  --chart-3: oklch(0.88 0.12 85);
+  --chart-4: oklch(0.68 0.15 15);
+  --chart-5: oklch(0.75 0.10 200);
+  --sidebar: oklch(0.20 0.01 240);
+  --sidebar-foreground: oklch(0.95 0.005 240);
+  --sidebar-primary: oklch(0.75 0.12 215);
+  --sidebar-primary-foreground: oklch(0.18 0.01 240);
+  --sidebar-accent: oklch(0.28 0.01 240);
+  --sidebar-accent-foreground: oklch(0.95 0.005 240);
+  --sidebar-border: oklch(0.30 0.01 240);
+  --sidebar-ring: oklch(0.75 0.12 215);
 }
 
 /* ============================================
@@ -177,23 +176,15 @@
   --color-chart-5: var(--chart-5);
   
   /* Kids Colors */
-  --color-kids-pink: var(--kids-pink);
-  --color-kids-purple: var(--kids-purple);
-  --color-kids-blue: var(--kids-blue);
-  --color-kids-teal: var(--kids-teal);
-  --color-kids-green: var(--kids-green);
-  --color-kids-yellow: var(--kids-yellow);
-  --color-kids-orange: var(--kids-orange);
+  --color-kids-sky: var(--kids-sky-blue);
+  --color-kids-yellow: var(--kids-soft-yellow);
+  --color-kids-mint: var(--kids-mint-green);
   --color-kids-coral: var(--kids-coral);
   
   /* Soft Backgrounds */
-  --color-kids-pink-soft: var(--kids-pink-soft);
-  --color-kids-purple-soft: var(--kids-purple-soft);
-  --color-kids-blue-soft: var(--kids-blue-soft);
-  --color-kids-teal-soft: var(--kids-teal-soft);
-  --color-kids-green-soft: var(--kids-green-soft);
+  --color-kids-sky-soft: var(--kids-sky-soft);
   --color-kids-yellow-soft: var(--kids-yellow-soft);
-  --color-kids-orange-soft: var(--kids-orange-soft);
+  --color-kids-mint-soft: var(--kids-mint-soft);
   --color-kids-coral-soft: var(--kids-coral-soft);
   
   /* Enhanced Radius */
@@ -231,12 +222,14 @@
     @apply bg-background text-foreground;
     font-family: 'Nunito', 'Geist', system-ui, sans-serif;
     overflow-x: hidden;
+    background-color: #FFF7E6;
   }
   
   /* Headings with playful font */
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Fredoka', 'Nunito', cursive;
     font-weight: 600;
+    color: var(--dark-text);
   }
   
   /* Make images more playful */
@@ -246,34 +239,34 @@
   
   /* Selection color */
   ::selection {
-    background: var(--kids-yellow);
-    color: var(--foreground);
+    background: var(--kids-soft-yellow);
+    color: var(--dark-text);
   }
   
-  /* Scrollbar styling */
+  /* Scrollbar styling - Premium look */
   ::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
   }
   
   ::-webkit-scrollbar-track {
-    background: var(--kids-purple-soft);
+    background: var(--kids-sky-soft);
     border-radius: 10px;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, var(--kids-pink), var(--kids-purple));
+    background: var(--kids-sky-blue);
     border-radius: 10px;
-    border: 2px solid var(--kids-purple-soft);
+    border: 2px solid var(--kids-sky-soft);
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, var(--kids-purple), var(--kids-blue));
+    background: var(--kids-sky-dark);
   }
 }
 
 /* ============================================
-   ✨ KEYFRAME ANIMATIONS
+   ✨ KEYFRAME ANIMATIONS (PRESERVED)
    ============================================ */
 
 /* Floating animation */
@@ -370,23 +363,6 @@
   }
 }
 
-/* Rainbow border */
-@keyframes rainbowBorder {
-  0% { border-color: var(--confetti-1); }
-  20% { border-color: var(--confetti-2); }
-  40% { border-color: var(--confetti-3); }
-  60% { border-color: var(--confetti-4); }
-  80% { border-color: var(--confetti-5); }
-  100% { border-color: var(--confetti-1); }
-}
-
-/* Rainbow background shift */
-@keyframes rainbowShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 /* Bubble float */
 @keyframes bubbleFloat {
   0%, 100% { 
@@ -403,20 +379,6 @@
 @keyframes spinSlow {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
-
-/* Pulse glow */
-@keyframes pulseGlow {
-  0%, 100% { 
-    box-shadow: 0 0 5px var(--kids-pink), 
-                0 0 10px var(--kids-purple), 
-                0 0 15px var(--kids-blue); 
-  }
-  50% { 
-    box-shadow: 0 0 10px var(--kids-pink), 
-                0 0 20px var(--kids-purple), 
-                0 0 30px var(--kids-blue); 
-  }
 }
 
 /* Heartbeat */
@@ -505,8 +467,32 @@
   100% { background-position: 0% 50%; }
 }
 
+/* Fade In Up Animation for Mobile Menu */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide in from left for mobile menu items */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* ============================================
-   🎯 ANIMATION UTILITY CLASSES
+   🎯 ANIMATION UTILITY CLASSES (PRESERVED)
    ============================================ */
 .animate-float {
   animation: float 4s ease-in-out infinite;
@@ -556,20 +542,12 @@
   animation: slideInRight 0.6s ease-out forwards;
 }
 
-.animate-rainbow-border {
-  animation: rainbowBorder 3s linear infinite;
-}
-
 .animate-bubble {
   animation: bubbleFloat 3s ease-in-out infinite;
 }
 
 .animate-spin-slow {
   animation: spinSlow 8s linear infinite;
-}
-
-.animate-pulse-glow {
-  animation: pulseGlow 2s ease-in-out infinite;
 }
 
 .animate-heartbeat {
@@ -615,6 +593,14 @@
   animation: gradientFlow 4s ease infinite;
 }
 
+.animate-fadeInUp {
+  animation: fadeInUp 0.3s ease-out forwards;
+}
+
+.animate-slideInLeft {
+  animation: slideInFromLeft 0.3s ease-out forwards;
+}
+
 /* Animation delays */
 .animation-delay-100 { animation-delay: 100ms; }
 .animation-delay-200 { animation-delay: 200ms; }
@@ -625,62 +611,42 @@
 .animation-delay-1000 { animation-delay: 1000ms; }
 
 /* ============================================
-   🎪 COMPONENT STYLES
+   🎪 PREMIUM COMPONENT STYLES
    ============================================ */
 
 /* -------- CARDS -------- */
 .kids-card {
-  @apply relative overflow-hidden rounded-3xl bg-card p-6 transition-all duration-500;
-  border: 3px solid transparent;
-  background-clip: padding-box;
-}
-
-.kids-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: inherit;
-  padding: 3px;
-  background: linear-gradient(135deg, var(--kids-pink), var(--kids-purple), var(--kids-blue), var(--kids-teal));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
-}
-
-.kids-card:hover::before {
-  opacity: 1;
+  @apply relative overflow-hidden rounded-3xl bg-white p-6 transition-all duration-500;
+  border: 2px solid var(--subtle-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 .kids-card:hover {
-  transform: translateY(-8px) scale(1.02);
+  transform: translateY(-8px);
   box-shadow: 
-    0 20px 40px -15px rgba(0, 0, 0, 0.1),
-    0 0 0 1px var(--kids-purple-soft);
+    0 20px 40px -15px rgba(110, 193, 228, 0.15),
+    0 0 0 2px var(--kids-sky-soft);
+  border-color: var(--kids-sky-blue);
 }
 
 /* Service Card Specific */
 .service-card {
-  @apply relative overflow-hidden rounded-3xl bg-card transition-all duration-500 cursor-pointer;
-  border: 2px solid var(--border);
+  @apply relative overflow-hidden rounded-3xl bg-white transition-all duration-500 cursor-pointer;
+  border: 2px solid var(--subtle-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 .service-card:hover {
-  transform: translateY(-12px) rotate(1deg);
-  border-color: transparent;
+  transform: translateY(-12px);
+  box-shadow: 
+    0 25px 50px -15px rgba(0, 0, 0, 0.08);
 }
 
 .service-card::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.2) 50%, transparent 60%);
+  background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.3) 50%, transparent 60%);
   transform: translateX(-100%);
   transition: transform 0.6s ease;
 }
@@ -689,31 +655,34 @@
   transform: translateX(100%);
 }
 
-/* Card with blob background */
+/* Card with subtle blob background */
 .blob-card {
-  @apply relative overflow-hidden rounded-3xl;
+  @apply relative overflow-hidden rounded-3xl bg-white;
 }
 
 .blob-card::before {
   content: '';
   position: absolute;
-  width: 150%;
-  height: 150%;
-  top: -25%;
-  left: -25%;
-  background: radial-gradient(circle, var(--kids-pink-soft) 0%, transparent 70%);
+  width: 200px;
+  height: 200px;
+  top: -50px;
+  right: -50px;
+  background: radial-gradient(circle, var(--kids-sky-soft) 0%, transparent 70%);
   animation: morphBlob 15s ease-in-out infinite;
-  z-index: -1;
+  z-index: 0;
+  opacity: 0.6;
 }
 
 /* -------- BUTTONS -------- */
 .kids-button {
-  @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-bold rounded-full transition-all duration-300;
-  background: linear-gradient(135deg, var(--kids-purple), var(--kids-blue));
+  @apply relative inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold rounded-full transition-all duration-300;
+  background: var(--kids-sky-blue);
   color: white;
   border: none;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 
+    0 4px 15px rgba(110, 193, 228, 0.3),
+    0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .kids-button::before {
@@ -732,8 +701,11 @@
 }
 
 .kids-button:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    0 8px 25px rgba(110, 193, 228, 0.4),
+    0 4px 10px rgba(0, 0, 0, 0.1);
+  background: var(--kids-sky-dark);
 }
 
 .kids-button:active {
@@ -741,40 +713,76 @@
 }
 
 /* Button variants */
-.kids-button-pink {
-  background: linear-gradient(135deg, var(--kids-pink), var(--kids-coral));
+.kids-button-mint {
+  background: var(--kids-mint-green);
+  box-shadow: 
+    0 4px 15px rgba(149, 225, 211, 0.3),
+    0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.kids-button-green {
-  background: linear-gradient(135deg, var(--kids-green), var(--kids-teal));
+.kids-button-mint:hover {
+  background: var(--kids-mint-dark);
+  box-shadow: 
+    0 8px 25px rgba(149, 225, 211, 0.4),
+    0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.kids-button-orange {
-  background: linear-gradient(135deg, var(--kids-orange), var(--kids-yellow));
-  color: var(--foreground);
+.kids-button-yellow {
+  background: var(--kids-soft-yellow);
+  color: var(--dark-text);
+  box-shadow: 
+    0 4px 15px rgba(255, 209, 102, 0.3),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.kids-button-yellow:hover {
+  background: var(--kids-yellow-dark);
+  box-shadow: 
+    0 8px 25px rgba(255, 209, 102, 0.4),
+    0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.kids-button-coral {
+  background: var(--kids-coral);
+  box-shadow: 
+    0 4px 15px rgba(255, 140, 148, 0.3),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.kids-button-coral:hover {
+  background: var(--kids-coral-dark);
+  box-shadow: 
+    0 8px 25px rgba(255, 140, 148, 0.4),
+    0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .kids-button-outline {
   background: transparent;
-  border: 3px solid var(--kids-purple);
-  color: var(--kids-purple);
+  border: 3px solid var(--kids-sky-blue);
+  color: var(--kids-sky-blue);
+  box-shadow: none;
 }
 
 .kids-button-outline:hover {
-  background: var(--kids-purple);
+  background: var(--kids-sky-blue);
   color: white;
+  box-shadow: 
+    0 4px 15px rgba(110, 193, 228, 0.3),
+    0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* Bouncy button */
 .bouncy-button {
   @apply relative px-8 py-4 rounded-full font-bold text-white;
-  background: linear-gradient(135deg, var(--kids-purple), var(--kids-pink));
+  background: var(--kids-sky-blue);
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 4px 15px rgba(110, 193, 228, 0.3);
 }
 
 .bouncy-button:hover {
   animation: jelly 0.5s ease;
-  transform: scale(1.1);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(110, 193, 228, 0.4);
 }
 
 /* -------- ICONS -------- */
@@ -797,24 +805,28 @@
 
 /* -------- BADGES -------- */
 .kids-badge {
-  @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-semibold;
-  background: linear-gradient(135deg, var(--kids-yellow-soft), var(--kids-orange-soft));
-  border: 2px dashed var(--kids-orange);
+  @apply inline-flex items-center gap-1 px-4 py-2 rounded-full text-sm font-semibold;
+  background: var(--kids-yellow-soft);
+  color: var(--dark-text);
+  border: 2px solid var(--kids-soft-yellow);
 }
 
-.kids-badge-pink {
-  background: linear-gradient(135deg, var(--kids-pink-soft), var(--kids-coral-soft));
-  border-color: var(--kids-pink);
+.kids-badge-sky {
+  background: var(--kids-sky-soft);
+  border-color: var(--kids-sky-blue);
+  color: var(--dark-text);
 }
 
-.kids-badge-blue {
-  background: linear-gradient(135deg, var(--kids-blue-soft), var(--kids-purple-soft));
-  border-color: var(--kids-blue);
+.kids-badge-mint {
+  background: var(--kids-mint-soft);
+  border-color: var(--kids-mint-green);
+  color: var(--dark-text);
 }
 
-.kids-badge-green {
-  background: linear-gradient(135deg, var(--kids-green-soft), var(--kids-teal-soft));
-  border-color: var(--kids-green);
+.kids-badge-coral {
+  background: var(--kids-coral-soft);
+  border-color: var(--kids-coral);
+  color: var(--dark-text);
 }
 
 /* -------- SECTIONS -------- */
@@ -829,117 +841,184 @@
   left: 0;
   width: 100%;
   height: 50px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23fef3c7'/%3E%3C/svg%3E") no-repeat;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23FFF7E6'/%3E%3C/svg%3E") no-repeat;
   background-size: cover;
 }
 
 /* -------- DECORATIVE SHAPES -------- */
 .deco-circle {
-  @apply absolute rounded-full opacity-60;
-  background: linear-gradient(135deg, var(--kids-pink-soft), var(--kids-purple-soft));
+  @apply absolute rounded-full opacity-40;
+  background: var(--kids-sky-soft);
 }
 
 .deco-blob {
   @apply absolute;
   animation: morphBlob 10s ease-in-out infinite;
-  background: linear-gradient(135deg, var(--kids-blue-soft), var(--kids-teal-soft));
-  opacity: 0.5;
+  background: var(--kids-mint-soft);
+  opacity: 0.4;
 }
 
 .deco-star {
   @apply absolute;
   animation: sparkle 2s ease-in-out infinite, float 4s ease-in-out infinite;
+  color: var(--kids-soft-yellow);
 }
 
 .deco-dots-pattern {
-  background-image: radial-gradient(var(--kids-purple-soft) 2px, transparent 2px);
+  background-image: radial-gradient(var(--subtle-border) 2px, transparent 2px);
   background-size: 20px 20px;
 }
 
 /* ============================================
-   🌈 GRADIENT UTILITIES
+   🌈 PREMIUM GRADIENT UTILITIES
    ============================================ */
-.gradient-rainbow {
-  background: linear-gradient(135deg, 
-    var(--kids-pink), 
-    var(--kids-purple), 
-    var(--kids-blue), 
-    var(--kids-teal), 
-    var(--kids-green)
-  );
+.gradient-sky-mint {
+  background: linear-gradient(135deg, var(--kids-sky-blue), var(--kids-mint-green));
 }
 
-.gradient-sunset {
-  background: linear-gradient(135deg, var(--kids-pink), var(--kids-orange), var(--kids-yellow));
+.gradient-yellow-coral {
+  background: linear-gradient(135deg, var(--kids-soft-yellow), var(--kids-coral));
 }
 
-.gradient-ocean {
-  background: linear-gradient(135deg, var(--kids-blue), var(--kids-teal), var(--kids-green));
+.gradient-soft-sky {
+  background: linear-gradient(135deg, var(--kids-sky-soft), var(--kids-mint-soft));
 }
 
-.gradient-candy {
-  background: linear-gradient(135deg, var(--kids-pink), var(--kids-purple));
-}
-
-.gradient-sunshine {
-  background: linear-gradient(135deg, var(--kids-yellow), var(--kids-orange));
-}
-
-.gradient-forest {
-  background: linear-gradient(135deg, var(--kids-green), var(--kids-teal));
-}
-
-.gradient-soft-rainbow {
-  background: linear-gradient(135deg, 
-    var(--kids-pink-soft), 
-    var(--kids-purple-soft), 
-    var(--kids-blue-soft), 
-    var(--kids-teal-soft)
-  );
+.gradient-soft-warm {
+  background: linear-gradient(135deg, var(--kids-yellow-soft), var(--kids-coral-soft));
 }
 
 /* Text gradients */
-.text-gradient-rainbow {
-  background: linear-gradient(135deg, 
-    var(--kids-pink), 
-    var(--kids-purple), 
-    var(--kids-blue), 
-    var(--kids-teal)
-  );
+.text-gradient-sky {
+  background: linear-gradient(135deg, var(--kids-sky-blue), var(--kids-mint-green));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.text-gradient-sunset {
-  background: linear-gradient(135deg, var(--kids-pink), var(--kids-orange));
+.text-gradient-warm {
+  background: linear-gradient(135deg, var(--kids-soft-yellow), var(--kids-coral));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.text-gradient-candy {
-  background: linear-gradient(135deg, var(--kids-pink), var(--kids-purple));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Animated gradients */
+/* Animated gradient (single color shift) */
 .gradient-animated {
   background: linear-gradient(270deg, 
-    var(--kids-pink), 
-    var(--kids-purple), 
-    var(--kids-blue), 
-    var(--kids-teal),
-    var(--kids-pink)
+    var(--kids-sky-blue), 
+    var(--kids-mint-green),
+    var(--kids-sky-blue)
   );
   background-size: 400% 400%;
   animation: gradientFlow 8s ease infinite;
 }
 
 /* ============================================
-   🎭 HOVER EFFECTS
+   🎠 SERVICE SPECIFIC COLORS (REFINED)
+   ============================================ */
+/* Dance - Coral */
+.service-dance { --service-color: var(--kids-coral); --service-soft: var(--kids-coral-soft); }
+.service-dance .icon-wrapper { 
+  background: var(--kids-coral-soft);
+  color: var(--kids-coral);
+}
+.service-dance:hover { border-color: var(--kids-coral); }
+
+/* Martial Arts Instructor - Sky Blue */
+.service-martial-instructor { --service-color: var(--kids-sky-blue); --service-soft: var(--kids-sky-soft); }
+.service-martial-instructor .icon-wrapper { 
+  background: var(--kids-sky-soft);
+  color: var(--kids-sky-blue);
+}
+.service-martial-instructor:hover { border-color: var(--kids-sky-blue); }
+
+/* Music Therapy - Yellow */
+.service-music { --service-color: var(--kids-soft-yellow); --service-soft: var(--kids-yellow-soft); }
+.service-music .icon-wrapper { 
+  background: var(--kids-yellow-soft);
+  color: #E6A800;
+}
+.service-music:hover { border-color: var(--kids-soft-yellow); }
+
+/* Kids Yoga - Mint Green */
+.service-yoga { --service-color: var(--kids-mint-green); --service-soft: var(--kids-mint-soft); }
+.service-yoga .icon-wrapper { 
+  background: var(--kids-mint-soft);
+  color: var(--kids-mint-green);
+}
+.service-yoga:hover { border-color: var(--kids-mint-green); }
+
+/* Martial Arts - Sky Blue (alternative) */
+.service-martial { --service-color: var(--kids-sky-blue); --service-soft: var(--kids-sky-soft); }
+.service-martial .icon-wrapper { 
+  background: var(--kids-sky-soft);
+  color: var(--kids-sky-blue);
+}
+.service-martial:hover { border-color: var(--kids-sky-blue); }
+
+/* Nutrition - Mint Green */
+.service-nutrition { --service-color: var(--kids-mint-green); --service-soft: var(--kids-mint-soft); }
+.service-nutrition .icon-wrapper { 
+  background: var(--kids-mint-soft);
+  color: var(--kids-mint-green);
+}
+.service-nutrition:hover { border-color: var(--kids-mint-green); }
+
+/* ============================================
+   🎨 SPECIAL EFFECTS (REFINED)
+   ============================================ */
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Neumorphism (with cream background) */
+.neu-raised {
+  background: #FFF7E6;
+  box-shadow: 
+    8px 8px 16px rgba(0, 0, 0, 0.05),
+    -8px -8px 16px rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-xl);
+}
+
+.neu-pressed {
+  background: #FFF7E6;
+  box-shadow: 
+    inset 4px 4px 8px rgba(0, 0, 0, 0.05),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-xl);
+}
+
+/* Glow effects (subtle) */
+.glow-sky {
+  box-shadow: 0 0 20px rgba(110, 193, 228, 0.3);
+}
+
+.glow-mint {
+  box-shadow: 0 0 20px rgba(149, 225, 211, 0.3);
+}
+
+.glow-yellow {
+  box-shadow: 0 0 20px rgba(255, 209, 102, 0.3);
+}
+
+.glow-coral {
+  box-shadow: 0 0 20px rgba(255, 140, 148, 0.3);
+}
+
+/* ============================================
+   🎭 HOVER EFFECTS (PRESERVED)
    ============================================ */
 .hover-lift {
   @apply transition-all duration-300;
@@ -947,7 +1026,7 @@
 
 .hover-lift:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
 }
 
 .hover-scale {
@@ -978,64 +1057,32 @@
   animation: jelly 0.5s ease;
 }
 
-.hover-glow {
-  @apply transition-all duration-300;
-}
-
-.hover-glow:hover {
-  box-shadow: 0 0 30px var(--kids-purple);
-}
-
-.hover-rainbow:hover {
-  animation: rainbowBorder 2s linear infinite;
-  border-width: 3px;
-}
-
 /* ============================================
-   🖼️ BACKGROUND PATTERNS
+   🖼️ BACKGROUND PATTERNS (SUBTLE)
    ============================================ */
 .bg-dots {
-  background-image: radial-gradient(circle, var(--kids-purple-soft) 1px, transparent 1px);
+  background-image: radial-gradient(circle, var(--subtle-border) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
 .bg-dots-large {
-  background-image: radial-gradient(circle, var(--kids-purple-soft) 3px, transparent 3px);
+  background-image: radial-gradient(circle, var(--subtle-border) 2px, transparent 2px);
   background-size: 40px 40px;
 }
 
 .bg-grid {
   background-image: 
-    linear-gradient(var(--kids-purple-soft) 1px, transparent 1px),
-    linear-gradient(90deg, var(--kids-purple-soft) 1px, transparent 1px);
+    linear-gradient(var(--subtle-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--subtle-border) 1px, transparent 1px);
   background-size: 30px 30px;
 }
 
-.bg-zigzag {
-  background: 
-    linear-gradient(135deg, var(--kids-pink-soft) 25%, transparent 25%) -20px 0,
-    linear-gradient(225deg, var(--kids-pink-soft) 25%, transparent 25%) -20px 0,
-    linear-gradient(315deg, var(--kids-pink-soft) 25%, transparent 25%),
-    linear-gradient(45deg, var(--kids-pink-soft) 25%, transparent 25%);
-  background-size: 40px 40px;
-}
-
-.bg-confetti {
+.bg-soft-pattern {
   background-image: 
-    radial-gradient(circle at 20% 30%, var(--confetti-1) 2px, transparent 2px),
-    radial-gradient(circle at 40% 70%, var(--confetti-2) 2px, transparent 2px),
-    radial-gradient(circle at 60% 20%, var(--confetti-3) 2px, transparent 2px),
-    radial-gradient(circle at 80% 50%, var(--confetti-4) 2px, transparent 2px),
-    radial-gradient(circle at 10% 80%, var(--confetti-5) 2px, transparent 2px),
-    radial-gradient(circle at 90% 90%, var(--confetti-6) 2px, transparent 2px);
-  background-size: 100px 100px;
-}
-
-.bg-bubbles {
-  background-image: 
-    radial-gradient(circle at 25% 25%, var(--kids-blue-soft) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, var(--kids-pink-soft) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, var(--kids-purple-soft) 0%, transparent 50%);
+    radial-gradient(circle at 20% 30%, var(--kids-sky-soft) 1px, transparent 1px),
+    radial-gradient(circle at 60% 70%, var(--kids-mint-soft) 1px, transparent 1px),
+    radial-gradient(circle at 80% 20%, var(--kids-yellow-soft) 1px, transparent 1px);
+  background-size: 80px 80px;
 }
 
 /* ============================================
@@ -1045,119 +1092,21 @@
   font-family: 'Fredoka', 'Nunito', cursive;
   font-weight: 700;
   letter-spacing: -0.02em;
+  color: var(--dark-text);
 }
 
 .heading-fun {
   font-family: 'Baloo 2', 'Fredoka', cursive;
   font-weight: 700;
-}
-
-.text-shadow-playful {
-  text-shadow: 
-    3px 3px 0 var(--kids-pink),
-    6px 6px 0 rgba(0,0,0,0.1);
+  color: var(--dark-text);
 }
 
 .text-shadow-soft {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.text-outline {
-  -webkit-text-stroke: 2px var(--kids-purple);
-  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 /* ============================================
-   🎠 SERVICE SPECIFIC COLORS
-   ============================================ */
-/* Dance - Pink */
-.service-dance { --service-color: var(--kids-pink); --service-soft: var(--kids-pink-soft); }
-.service-dance .icon-wrapper { background: var(--kids-pink-soft); }
-.service-dance:hover { border-color: var(--kids-pink); }
-
-/* Martial Arts Instructor - Blue */
-.service-martial-instructor { --service-color: var(--kids-blue); --service-soft: var(--kids-blue-soft); }
-.service-martial-instructor .icon-wrapper { background: var(--kids-blue-soft); }
-.service-martial-instructor:hover { border-color: var(--kids-blue); }
-
-/* Music Therapy - Purple */
-.service-music { --service-color: var(--kids-purple); --service-soft: var(--kids-purple-soft); }
-.service-music .icon-wrapper { background: var(--kids-purple-soft); }
-.service-music:hover { border-color: var(--kids-purple); }
-
-/* Kids Yoga - Teal */
-.service-yoga { --service-color: var(--kids-teal); --service-soft: var(--kids-teal-soft); }
-.service-yoga .icon-wrapper { background: var(--kids-teal-soft); }
-.service-yoga:hover { border-color: var(--kids-teal); }
-
-/* Martial Arts - Orange */
-.service-martial { --service-color: var(--kids-orange); --service-soft: var(--kids-orange-soft); }
-.service-martial .icon-wrapper { background: var(--kids-orange-soft); }
-.service-martial:hover { border-color: var(--kids-orange); }
-
-/* Nutrition - Green */
-.service-nutrition { --service-color: var(--kids-green); --service-soft: var(--kids-green-soft); }
-.service-nutrition .icon-wrapper { background: var(--kids-green-soft); }
-.service-nutrition:hover { border-color: var(--kids-green); }
-
-/* ============================================
-   🎨 SPECIAL EFFECTS
-   ============================================ */
-/* Glassmorphism */
-.glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.glass-strong {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-/* Neumorphism */
-.neu-raised {
-  background: var(--background);
-  box-shadow: 
-    8px 8px 16px rgba(0, 0, 0, 0.1),
-    -8px -8px 16px rgba(255, 255, 255, 0.9);
-  border-radius: var(--radius-xl);
-}
-
-.neu-pressed {
-  background: var(--background);
-  box-shadow: 
-    inset 4px 4px 8px rgba(0, 0, 0, 0.1),
-    inset -4px -4px 8px rgba(255, 255, 255, 0.9);
-  border-radius: var(--radius-xl);
-}
-
-/* Glow effects */
-.glow-pink {
-  box-shadow: 0 0 20px var(--kids-pink), 0 0 40px var(--kids-pink-soft);
-}
-
-.glow-purple {
-  box-shadow: 0 0 20px var(--kids-purple), 0 0 40px var(--kids-purple-soft);
-}
-
-.glow-blue {
-  box-shadow: 0 0 20px var(--kids-blue), 0 0 40px var(--kids-blue-soft);
-}
-
-.glow-rainbow {
-  box-shadow: 
-    0 0 10px var(--kids-pink),
-    0 0 20px var(--kids-purple),
-    0 0 30px var(--kids-blue),
-    0 0 40px var(--kids-teal);
-}
-
-/* ============================================
-   🎪 FLOATING DECORATIONS
+   🎪 FLOATING DECORATIONS (SIMPLIFIED)
    ============================================ */
 .floating-shapes {
   position: fixed;
@@ -1173,13 +1122,13 @@
 .floating-shapes .shape {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .shape-1 {
   width: 60px;
   height: 60px;
-  background: var(--kids-pink-soft);
+  background: var(--kids-sky-soft);
   top: 10%;
   left: 10%;
   animation: float 6s ease-in-out infinite;
@@ -1188,7 +1137,7 @@
 .shape-2 {
   width: 40px;
   height: 40px;
-  background: var(--kids-blue-soft);
+  background: var(--kids-mint-soft);
   top: 20%;
   right: 15%;
   animation: float 5s ease-in-out infinite 0.5s;
@@ -1197,7 +1146,7 @@
 .shape-3 {
   width: 80px;
   height: 80px;
-  background: var(--kids-purple-soft);
+  background: var(--kids-yellow-soft);
   bottom: 20%;
   left: 20%;
   animation: float 7s ease-in-out infinite 1s;
@@ -1206,19 +1155,10 @@
 .shape-4 {
   width: 30px;
   height: 30px;
-  background: var(--kids-yellow-soft);
+  background: var(--kids-coral-soft);
   bottom: 30%;
   right: 10%;
   animation: float 4s ease-in-out infinite 1.5s;
-}
-
-.shape-5 {
-  width: 50px;
-  height: 50px;
-  background: var(--kids-teal-soft);
-  top: 50%;
-  left: 5%;
-  animation: float 5.5s ease-in-out infinite 0.8s;
 }
 
 /* ============================================
@@ -1234,11 +1174,12 @@
   }
   
   .kids-button {
-    @apply px-4 py-2 text-sm;
+    @apply px-6 py-3 text-sm;
   }
   
   .floating-shapes .shape {
-    transform: scale(0.7);
+    transform: scale(0.6);
+    opacity: 0.2;
   }
 }
 
@@ -1290,36 +1231,4 @@
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
-}
-
-/* Fade In Up Animation for Mobile Menu */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fadeInUp {
-  animation: fadeInUp 0.3s ease-out forwards;
-}
-
-/* Slide in from right for mobile menu items */
-@keyframes slideInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-slideInLeft {
-  animation: slideInFromLeft 0.3s ease-out forwards;
 }

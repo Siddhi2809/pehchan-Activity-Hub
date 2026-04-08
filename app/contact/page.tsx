@@ -8,9 +8,6 @@ import {
   Phone, 
   Clock, 
   Send, 
-  Sparkles, 
-  Heart,
-  MessageCircle,
   User,
   Baby,
   Calendar,
@@ -20,21 +17,11 @@ import {
   HelpCircle,
   ChevronDown,
   ExternalLink,
-  Instagram,
-  Facebook,
-  Youtube,
-  Rocket
+  MessageCircle,
+  Target
 } from 'lucide-react'
 import { FormEvent, useState } from 'react'
 import Link from 'next/link'
-import { 
-  FloatingClouds, 
-  FloatingStars,
-  WaveDivider,
-  BlobShape,
-  PlayfulUnderline,
-  SunDecoration
-} from '@/components/decorations/FloatingElements'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -89,21 +76,17 @@ export default function Contact() {
       title: 'Call Us',
       primary: '+1 (555) 123-4567',
       secondary: 'Mon-Fri 9AM-6PM',
-      color: 'from-green-400 to-emerald-500',
-      bgColor: 'bg-green-50',
-      iconColor: 'text-green-500',
-      emoji: '📞',
+      color: '#95E1D3',
+      bgLight: '#F0FAF8',
       action: 'tel:+15551234567',
     },
     {
       icon: Mail,
       title: 'Email Us',
       primary: 'hello@littlestars.com',
-      secondary: "We'll respond within 24hrs",
-      color: 'from-pink-400 to-rose-500',
-      bgColor: 'bg-pink-50',
-      iconColor: 'text-pink-500',
-      emoji: '💌',
+      secondary: 'Response within 24 hours',
+      color: '#FF8C94',
+      bgLight: '#FFF0F1',
       action: 'mailto:hello@littlestars.com',
     },
     {
@@ -111,10 +94,8 @@ export default function Contact() {
       title: 'Visit Us',
       primary: '123 Rainbow Lane',
       secondary: 'Sunshine City, ST 12345',
-      color: 'from-blue-400 to-cyan-500',
-      bgColor: 'bg-blue-50',
-      iconColor: 'text-blue-500',
-      emoji: '📍',
+      color: '#6EC1E4',
+      bgLight: '#EBF7FC',
       action: 'https://maps.google.com',
     },
     {
@@ -122,131 +103,96 @@ export default function Contact() {
       title: 'Working Hours',
       primary: 'Mon-Fri: 9AM - 6PM',
       secondary: 'Sat: 10AM - 4PM',
-      color: 'from-purple-400 to-violet-500',
-      bgColor: 'bg-purple-50',
-      iconColor: 'text-purple-500',
-      emoji: '⏰',
+      color: '#FFD166',
+      bgLight: '#FFF8E5',
       action: null,
     },
   ]
 
   const services = [
-    { value: 'dance', label: '💃 Dance Classes' },
-    { value: 'martial-arts', label: '🥋 Martial Arts' },
-    { value: 'music-therapy', label: '🎵 Music Therapy' },
-    { value: 'yoga', label: '🧘 Kids Yoga' },
-    { value: 'nutrition', label: '🥗 Nutrition & Diet' },
-    { value: 'other', label: '✨ Other / Multiple Services' },
+    { value: 'dance', label: 'Dance Classes' },
+    { value: 'martial-arts', label: 'Martial Arts' },
+    { value: 'music-therapy', label: 'Music Therapy' },
+    { value: 'yoga', label: 'Kids Yoga' },
+    { value: 'nutrition', label: 'Nutrition & Diet' },
+    { value: 'other', label: 'Other / Multiple Services' },
   ]
 
   const faqs = [
     {
       question: 'What age groups do you work with?',
       answer: 'We work with children from ages 3 to 16. Our programs are tailored to different age groups to ensure age-appropriate activities and learning.',
-      emoji: '👶',
     },
     {
       question: 'How do I know which service is right for my child?',
       answer: "We offer a free consultation where our experts assess your child's needs and recommend the best program. You can also try a trial session!",
-      emoji: '🤔',
     },
     {
       question: 'What are your payment options?',
-      answer: 'We accept all major credit cards, bank transfers, and offer flexible payment plans. Some insurance plans may cover our services too!',
-      emoji: '💳',
+      answer: 'We accept all major credit cards, bank transfers, and offer flexible payment plans. Some insurance plans may cover our services.',
     },
     {
       question: 'Can parents stay during sessions?',
       answer: 'Absolutely! We encourage parent involvement. You can observe sessions through our viewing area or participate in family activities.',
-      emoji: '👨‍👩‍👧',
     },
     {
       question: 'How long are the therapy sessions?',
       answer: 'Sessions typically last 45-60 minutes, depending on the program. We recommend consistent weekly sessions for best results.',
-      emoji: '⏱️',
     },
   ]
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-amber-50/50 via-white to-purple-50/30 overflow-hidden">
+    <main className="min-h-screen bg-[#FFF7E6] overflow-hidden">
       <Navbar />
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative pt-28 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Background Decorations */}
-        <div className="absolute inset-0 z-0">
-          <FloatingClouds />
-          <FloatingStars />
-          
-          {/* Gradient Blobs */}
-          <div className="absolute top-10 right-0 w-[400px] h-[400px] opacity-30">
-            <BlobShape color="var(--kids-pink-soft)" className="w-full h-full" />
-          </div>
-          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] opacity-20">
-            <BlobShape color="var(--kids-blue-soft)" className="w-full h-full" />
-          </div>
-          
-          {/* Sun */}
-          <div className="absolute top-20 right-20 w-16 h-16 hidden lg:block">
-            <SunDecoration className="w-full h-full" />
-          </div>
-        </div>
-
-        {/* Floating Decorations */}
-        <div className="absolute top-32 right-[10%] animate-float hidden md:block">
-          <div className="w-16 h-16 bg-gradient-to-br from-pink-300 to-rose-400 rounded-2xl flex items-center justify-center text-3xl shadow-lg rotate-12">
-            💌
-          </div>
-        </div>
-        <div className="absolute bottom-24 left-[8%] animate-bounceSlow hidden md:block">
-          <div className="w-14 h-14 bg-gradient-to-br from-green-300 to-teal-400 rounded-full flex items-center justify-center text-2xl shadow-lg">
-            📞
-          </div>
-        </div>
-        <div className="absolute top-1/2 right-[5%] animate-float animation-delay-500 hidden lg:block">
-          <div className="w-12 h-12 bg-gradient-to-br from-purple-300 to-violet-400 rounded-xl flex items-center justify-center text-xl shadow-lg -rotate-12">
-            ✨
-          </div>
+      <section className="relative pt-10 pb-20 px-4 sm:px-6 lg:px-8">
+        {/* Subtle Background */}
+        <div className="absolute inset-0 z-0 opacity-30">
+          <div className="absolute top-20 right-10 w-96 h-96 bg-[#EBF7FC] rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-10 w-80 h-80 bg-[#F0FAF8] rounded-full blur-3xl"></div>
         </div>
 
         {/* Content */}
         <div className="max-w-4xl mx-auto text-center relative z-10">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-green-100 to-teal-100 border-2 border-dashed border-green-300 mb-6 animate-pop-in">
-            <MessageCircle className="w-5 h-5 text-green-600" />
-            <span className="font-bold text-green-700">We'd Love to Hear From You!</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#6EC1E4]/30 mb-6 shadow-sm">
+            <div className="w-2 h-2 rounded-full bg-[#95E1D3] animate-pulse"></div>
+            <span className="text-sm font-semibold text-[#2D3436]">Get In Touch</span>
           </div>
 
-          {/* Tagline */}
-          <span className="font-satisfy text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 block mb-4 animate-slide-up">
-            Let's Connect! 
-          </span>
-
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 animate-slide-up animation-delay-100">
-            <span className="text-slate-800">Get In </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 animate-gradient">
-              Touch
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6">
+            <span className="text-[#2D3436] block mb-2">Let's Start Your</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6EC1E4] to-[#95E1D3]">
+              Child's Journey
             </span>
-            <span className="inline-block ml-3 animate-wave">👋</span>
           </h1>
 
-          {/* Playful Underline */}
-          <div className="flex justify-center mb-6 animate-slide-up animation-delay-200">
-            <PlayfulUnderline color="#10B981" />
+          {/* Decorative Line */}
+          <div className="flex justify-center mb-6">
+            <div className="w-24 h-1 bg-gradient-to-r from-[#6EC1E4] to-[#95E1D3] rounded-full"></div>
           </div>
 
           {/* Description */}
-          <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto leading-relaxed animate-slide-up animation-delay-300">
-            Have questions about our <span className="text-pink-500 font-bold">fun programs</span>? 
-            Want to schedule a visit? We're here to help your 
-            <span className="text-purple-500 font-bold"> little star shine!</span> ⭐
+          <p className="text-xl md:text-2xl text-[#636E72] max-w-2xl mx-auto leading-relaxed mb-12">
+            Have questions about our programs? Ready to schedule a consultation? 
+            We're here to help every step of the way.
           </p>
-        </div>
 
-        {/* Bottom Wave */}
-        <div className="absolute bottom-0 left-0 w-full">
-          <WaveDivider color="#ffffff" />
+          {/* Quick Stats */}
+          <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
+            {[
+              { value: '< 24hrs', label: 'Response Time' },
+              { value: '100%', label: 'Confidential' },
+              { value: 'Free', label: 'Consultation' },
+            ].map((stat, i) => (
+              <div key={i} className="text-center">
+                <div className="text-2xl font-bold text-[#6EC1E4] mb-1">{stat.value}</div>
+                <div className="text-sm text-[#636E72]">{stat.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -258,95 +204,76 @@ export default function Contact() {
               <a
                 key={i}
                 href={info.action || '#'}
-                className={`
-                  group relative p-6 rounded-3xl bg-white border-2 border-slate-100
-                  shadow-lg hover:shadow-2xl transition-all duration-500
-                  hover:-translate-y-2 hover:border-transparent overflow-hidden
-                  animate-slide-up ${info.action ? 'cursor-pointer' : 'cursor-default'}
-                `}
-                style={{ animationDelay: `${i * 100}ms` }}
+                className="group p-6 rounded-2xl bg-white border-2 border-[#E8E8E8] shadow-sm hover:shadow-xl hover:border-current transition-all duration-500 hover:-translate-y-2"
+                style={{ color: info.color }}
               >
-                {/* Gradient Background on Hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${info.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
-                
                 {/* Icon */}
-                <div className={`w-14 h-14 ${info.bgColor} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
-                  <span className="text-2xl">{info.emoji}</span>
+                <div 
+                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110"
+                  style={{ backgroundColor: info.bgLight }}
+                >
+                  <info.icon className="w-7 h-7" style={{ color: info.color }} />
                 </div>
                 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-slate-800 mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-500 transition-all">
+                <h3 className="text-lg font-bold text-[#2D3436] mb-2">
                   {info.title}
                 </h3>
                 
                 {/* Info */}
-                <p className={`font-semibold ${info.iconColor} mb-1`}>{info.primary}</p>
-                <p className="text-sm text-slate-500">{info.secondary}</p>
+                <p className="font-semibold mb-1" style={{ color: info.color }}>
+                  {info.primary}
+                </p>
+                <p className="text-sm text-[#636E72]">{info.secondary}</p>
                 
-                {/* Arrow for clickable items */}
+                {/* Arrow */}
                 {info.action && (
-                  <div className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0 -translate-x-2">
-                    <ArrowRight className="w-4 h-4 text-slate-600" />
+                  <div className="mt-4 flex items-center gap-2 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span>Contact</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 )}
-                
-                {/* Corner Decoration */}
-                <div className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${info.color} opacity-0 group-hover:opacity-10 rounded-bl-full transition-opacity duration-300`}></div>
               </a>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ================= CONTACT FORM & MAP SECTION ================= */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
+      {/* ================= FORM & MAP SECTION ================= */}
+      <section className="relative py-20">
         {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-pink-50/50 to-orange-50/30"></div>
-        <div className="absolute inset-0 bg-dots opacity-20"></div>
-        
-        {/* Decorative Elements */}
-        <div className="absolute top-20 left-10 text-5xl opacity-20 animate-float">✉️</div>
-        <div className="absolute bottom-20 right-10 text-4xl opacity-20 animate-bounceSlow">💬</div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#EBF7FC] to-[#F0FAF8] opacity-50"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             
             {/* Form Side */}
-            <div className="order-2 lg:order-1 animate-slide-left">
-              <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-2xl shadow-purple-100/50 border border-purple-100/50 relative overflow-hidden">
-                
-                {/* Decorative Corner */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-400 to-pink-400 opacity-5 rounded-bl-full"></div>
+            <div>
+              <div className="bg-white rounded-2xl p-8 md:p-10 shadow-xl border border-[#E8E8E8]">
                 
                 {/* Form Header */}
                 <div className="mb-8">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 font-semibold mb-4">
-                    <Send className="w-4 h-4" />
-                    Send a Message
-                  </div>
-                  <h2 className="text-3xl md:text-4xl font-extrabold text-slate-800">
-                    Drop Us a Line! 
-                    <span className="inline-block ml-2 animate-wiggle">✍️</span>
+                  <h2 className="text-3xl md:text-4xl font-extrabold text-[#2D3436] mb-2">
+                    Send Us a Message
                   </h2>
-                  <p className="text-slate-500 mt-2">
-                    Fill out the form below and we'll get back to you super quick!
+                  <p className="text-[#636E72]">
+                    Fill out the form below and we'll get back to you within 24 hours
                   </p>
                 </div>
 
                 {/* Success Message */}
                 {submitted && (
-                  <div className="mb-8 p-6 bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl animate-pop-in">
+                  <div className="mb-8 p-6 bg-[#F0FAF8] border-2 border-[#95E1D3] rounded-xl">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <CheckCircle2 className="w-6 h-6 text-green-600" />
+                      <div className="w-12 h-12 bg-[#95E1D3] rounded-full flex items-center justify-center flex-shrink-0">
+                        <CheckCircle2 className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-bold text-green-800 text-lg mb-1">
-                          Message Sent Successfully! 🎉
+                        <h3 className="font-bold text-[#2D3436] text-lg mb-1">
+                          Message Sent Successfully!
                         </h3>
-                        <p className="text-green-700">
-                          Thank you for reaching out! Our team will contact you within 24 hours. 
-                          We can't wait to meet your little star! ⭐
+                        <p className="text-[#636E72]">
+                          Thank you for reaching out. Our team will contact you within 24 hours.
                         </p>
                       </div>
                     </div>
@@ -355,12 +282,11 @@ export default function Contact() {
 
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Name & Email Row */}
+                  {/* Name & Email */}
                   <div className="grid md:grid-cols-2 gap-6">
-                    {/* Name */}
-                    <div className="group">
-                      <label htmlFor="name" className="flex items-center gap-2 text-sm font-bold text-slate-700 mb-2">
-                        <User className="w-4 h-4 text-purple-500" />
+                    <div>
+                      <label htmlFor="name" className="flex items-center gap-2 text-sm font-semibold text-[#2D3436] mb-2">
+                        <User className="w-4 h-4 text-[#6EC1E4]" />
                         Your Name *
                       </label>
                       <input
@@ -370,15 +296,14 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-5 py-4 rounded-xl border-2 border-slate-200 bg-slate-50/50 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-purple-400 focus:bg-white focus:ring-4 focus:ring-purple-100 transition-all duration-300"
+                        className="w-full px-4 py-3 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] placeholder:text-[#B2BEC3] focus:outline-none focus:border-[#6EC1E4] focus:ring-4 focus:ring-[#6EC1E4]/10 transition-all"
                         placeholder="John Smith"
                       />
                     </div>
 
-                    {/* Email */}
-                    <div className="group">
-                      <label htmlFor="email" className="flex items-center gap-2 text-sm font-bold text-slate-700 mb-2">
-                        <Mail className="w-4 h-4 text-pink-500" />
+                    <div>
+                      <label htmlFor="email" className="flex items-center gap-2 text-sm font-semibold text-[#2D3436] mb-2">
+                        <Mail className="w-4 h-4 text-[#FF8C94]" />
                         Email Address *
                       </label>
                       <input
@@ -388,18 +313,17 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-5 py-4 rounded-xl border-2 border-slate-200 bg-slate-50/50 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-pink-400 focus:bg-white focus:ring-4 focus:ring-pink-100 transition-all duration-300"
+                        className="w-full px-4 py-3 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] placeholder:text-[#B2BEC3] focus:outline-none focus:border-[#FF8C94] focus:ring-4 focus:ring-[#FF8C94]/10 transition-all"
                         placeholder="john@example.com"
                       />
                     </div>
                   </div>
 
-                  {/* Phone & Child Name Row */}
+                  {/* Phone & Child Name */}
                   <div className="grid md:grid-cols-2 gap-6">
-                    {/* Phone */}
-                    <div className="group">
-                      <label htmlFor="phone" className="flex items-center gap-2 text-sm font-bold text-slate-700 mb-2">
-                        <Phone className="w-4 h-4 text-green-500" />
+                    <div>
+                      <label htmlFor="phone" className="flex items-center gap-2 text-sm font-semibold text-[#2D3436] mb-2">
+                        <Phone className="w-4 h-4 text-[#95E1D3]" />
                         Phone Number
                       </label>
                       <input
@@ -408,15 +332,14 @@ export default function Contact() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-5 py-4 rounded-xl border-2 border-slate-200 bg-slate-50/50 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-green-400 focus:bg-white focus:ring-4 focus:ring-green-100 transition-all duration-300"
+                        className="w-full px-4 py-3 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] placeholder:text-[#B2BEC3] focus:outline-none focus:border-[#95E1D3] focus:ring-4 focus:ring-[#95E1D3]/10 transition-all"
                         placeholder="+1 (555) 000-0000"
                       />
                     </div>
 
-                    {/* Child's Name */}
-                    <div className="group">
-                      <label htmlFor="childName" className="flex items-center gap-2 text-sm font-bold text-slate-700 mb-2">
-                        <Baby className="w-4 h-4 text-orange-500" />
+                    <div>
+                      <label htmlFor="childName" className="flex items-center gap-2 text-sm font-semibold text-[#2D3436] mb-2">
+                        <Baby className="w-4 h-4 text-[#FFD166]" />
                         Child's Name
                       </label>
                       <input
@@ -425,18 +348,17 @@ export default function Contact() {
                         name="childName"
                         value={formData.childName}
                         onChange={handleChange}
-                        className="w-full px-5 py-4 rounded-xl border-2 border-slate-200 bg-slate-50/50 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-orange-400 focus:bg-white focus:ring-4 focus:ring-orange-100 transition-all duration-300"
-                        placeholder="Little star's name"
+                        className="w-full px-4 py-3 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] placeholder:text-[#B2BEC3] focus:outline-none focus:border-[#FFD166] focus:ring-4 focus:ring-[#FFD166]/10 transition-all"
+                        placeholder="Child's name"
                       />
                     </div>
                   </div>
 
-                  {/* Child Age & Service Row */}
+                  {/* Child Age & Service */}
                   <div className="grid md:grid-cols-2 gap-6">
-                    {/* Child's Age */}
-                    <div className="group">
-                      <label htmlFor="childAge" className="flex items-center gap-2 text-sm font-bold text-slate-700 mb-2">
-                        <Calendar className="w-4 h-4 text-teal-500" />
+                    <div>
+                      <label htmlFor="childAge" className="flex items-center gap-2 text-sm font-semibold text-[#2D3436] mb-2">
+                        <Calendar className="w-4 h-4 text-[#6EC1E4]" />
                         Child's Age
                       </label>
                       <input
@@ -445,23 +367,22 @@ export default function Contact() {
                         name="childAge"
                         value={formData.childAge}
                         onChange={handleChange}
-                        className="w-full px-5 py-4 rounded-xl border-2 border-slate-200 bg-slate-50/50 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-teal-400 focus:bg-white focus:ring-4 focus:ring-teal-100 transition-all duration-300"
+                        className="w-full px-4 py-3 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] placeholder:text-[#B2BEC3] focus:outline-none focus:border-[#6EC1E4] focus:ring-4 focus:ring-[#6EC1E4]/10 transition-all"
                         placeholder="e.g., 5 years"
                       />
                     </div>
 
-                    {/* Service Interest */}
-                    <div className="group">
-                      <label htmlFor="service" className="flex items-center gap-2 text-sm font-bold text-slate-700 mb-2">
-                        <Sparkles className="w-4 h-4 text-purple-500" />
-                        Interested Service
+                    <div>
+                      <label htmlFor="service" className="flex items-center gap-2 text-sm font-semibold text-[#2D3436] mb-2">
+                        <Target className="w-4 h-4 text-[#95E1D3]" />
+                        Service Interest
                       </label>
                       <select
                         id="service"
                         name="service"
                         value={formData.service}
                         onChange={handleChange}
-                        className="w-full px-5 py-4 rounded-xl border-2 border-slate-200 bg-slate-50/50 text-slate-800 focus:outline-none focus:border-purple-400 focus:bg-white focus:ring-4 focus:ring-purple-100 transition-all duration-300 appearance-none cursor-pointer"
+                        className="w-full px-4 py-3 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] focus:outline-none focus:border-[#95E1D3] focus:ring-4 focus:ring-[#95E1D3]/10 transition-all"
                       >
                         <option value="">Select a service...</option>
                         {services.map((service) => (
@@ -474,9 +395,9 @@ export default function Contact() {
                   </div>
 
                   {/* Message */}
-                  <div className="group">
-                    <label htmlFor="message" className="flex items-center gap-2 text-sm font-bold text-slate-700 mb-2">
-                      <MessageCircle className="w-4 h-4 text-blue-500" />
+                  <div>
+                    <label htmlFor="message" className="flex items-center gap-2 text-sm font-semibold text-[#2D3436] mb-2">
+                      <MessageCircle className="w-4 h-4 text-[#6EC1E4]" />
                       Your Message *
                     </label>
                     <textarea
@@ -486,8 +407,8 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-5 py-4 rounded-xl border-2 border-slate-200 bg-slate-50/50 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-blue-400 focus:bg-white focus:ring-4 focus:ring-blue-100 transition-all duration-300 resize-none"
-                      placeholder="Tell us about your child and what you're looking for... We'd love to hear from you! 💜"
+                      className="w-full px-4 py-3 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] placeholder:text-[#B2BEC3] focus:outline-none focus:border-[#6EC1E4] focus:ring-4 focus:ring-[#6EC1E4]/10 transition-all resize-none"
+                      placeholder="Tell us about your child and what you're looking for..."
                     />
                   </div>
 
@@ -496,155 +417,109 @@ export default function Contact() {
                     type="submit"
                     disabled={isSubmitting}
                     className={`
-                      group relative w-full px-8 py-5 rounded-xl font-bold text-lg
-                      transition-all duration-300 overflow-hidden
+                      w-full px-8 py-4 rounded-xl font-bold text-base text-white
+                      transition-all duration-300
                       ${isSubmitting 
-                        ? 'bg-slate-400 cursor-not-allowed' 
-                        : 'bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 hover:shadow-xl hover:shadow-purple-200 hover:-translate-y-1'
+                        ? 'bg-[#B2BEC3] cursor-not-allowed' 
+                        : 'bg-[#2D3436] hover:bg-[#6EC1E4] shadow-lg hover:shadow-xl hover:-translate-y-1'
                       }
-                      text-white
                     `}
                   >
-                    <span className="relative z-10 flex items-center justify-center gap-3">
-                      {isSubmitting ? (
-                        <>
-                          <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                          Sending Magic...
-                        </>
-                      ) : (
-                        <>
-                          <Send className="w-5 h-5" />
-                          Send Message
-                          <Sparkles className="w-5 h-5 group-hover:animate-spin" />
-                        </>
-                      )}
-                    </span>
-                    
-                    {/* Shine effect */}
-                    {!isSubmitting && (
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                    {isSubmitting ? (
+                      <span className="flex items-center justify-center gap-3">
+                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                        Sending...
+                      </span>
+                    ) : (
+                      <span className="flex items-center justify-center gap-3">
+                        <Send className="w-5 h-5" />
+                        Send Message
+                      </span>
                     )}
                   </button>
 
                   {/* Privacy Note */}
-                  <p className="text-center text-sm text-slate-500 flex items-center justify-center gap-2">
-                    <Heart className="w-4 h-4 text-pink-400 fill-current" />
-                    Your information is safe with us. We never share your data.
+                  <p className="text-center text-sm text-[#636E72]">
+                    Your information is secure and confidential
                   </p>
                 </form>
               </div>
             </div>
 
             {/* Map & Info Side */}
-            <div className="order-1 lg:order-2 space-y-8 animate-slide-right">
+            <div className="space-y-8">
               
-              {/* Map Container */}
-              <div className="bg-white rounded-[2rem] overflow-hidden shadow-2xl shadow-purple-100/50 border border-purple-100/50">
-                {/* Map Header */}
-                <div className="p-6 bg-gradient-to-r from-blue-500 to-cyan-500">
+              {/* Map */}
+              <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-[#E8E8E8]">
+                <div className="p-6 bg-[#6EC1E4]">
                   <div className="flex items-center gap-3 text-white">
                     <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg">Find Us Here!</h3>
-                      <p className="text-white/80 text-sm">123 Rainbow Lane, Sunshine City</p>
+                      <h3 className="font-bold text-lg">Visit Our Center</h3>
+                      <p className="text-white/90 text-sm">123 Rainbow Lane, Sunshine City</p>
                     </div>
                   </div>
                 </div>
                 
-                {/* Map Placeholder */}
-                <div className="relative h-[300px] bg-gradient-to-br from-blue-100 to-cyan-100">
-                  {/* Replace with actual Google Map embed */}
+                <div className="relative h-[300px] bg-[#EBF7FC]">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
-                      <div className="w-20 h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center mx-auto mb-4 animate-bounce">
-                        <span className="text-4xl">📍</span>
+                      <div className="w-16 h-16 bg-white rounded-xl shadow-lg flex items-center justify-center mx-auto mb-4">
+                        <MapPin className="w-8 h-8 text-[#6EC1E4]" />
                       </div>
-                      <p className="text-blue-600 font-semibold">Interactive Map Coming Soon!</p>
+                      <p className="text-[#2D3436] font-semibold mb-2">Interactive Map</p>
                       <a 
                         href="https://maps.google.com" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-blue-500 hover:text-blue-700 mt-2 text-sm"
+                        className="inline-flex items-center gap-2 text-[#6EC1E4] hover:text-[#4DA8CE] text-sm font-medium"
                       >
                         <ExternalLink className="w-4 h-4" />
                         Open in Google Maps
                       </a>
                     </div>
                   </div>
-                  
-                  {/* Map Decorations */}
-                  <div className="absolute top-4 left-4 w-12 h-12 bg-yellow-200 rounded-full opacity-50 animate-float"></div>
-                  <div className="absolute bottom-4 right-4 w-8 h-8 bg-pink-200 rounded-full opacity-50 animate-bounceSlow"></div>
                 </div>
               </div>
 
               {/* Quick Actions */}
-              <div className="bg-white rounded-[2rem] p-8 shadow-xl border border-purple-100/50">
-                <h3 className="text-xl font-bold text-slate-800 mb-6 flex items-center gap-2">
-                  <Rocket className="w-5 h-5 text-purple-500" />
-                  Quick Actions
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-[#E8E8E8]">
+                <h3 className="text-xl font-bold text-[#2D3436] mb-6">
+                  Quick Contact
                 </h3>
                 
                 <div className="space-y-4">
-                  
-                  {/* Call Now */}
                   <a 
                     href="tel:+15551234567"
-                    className="group flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-green-50 to-teal-50 border border-green-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    className="group flex items-center gap-4 p-4 rounded-xl bg-[#F0FAF8] border-2 border-[#E8E8E8] hover:border-[#95E1D3] hover:shadow-md transition-all duration-300"
                   >
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-xl flex items-center justify-center text-white">
+                    <div className="w-12 h-12 bg-[#95E1D3] rounded-xl flex items-center justify-center text-white">
                       <Phone className="w-6 h-6" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-bold text-slate-800">Call Us Now</h4>
-                      <p className="text-sm text-slate-500">+1 (555) 123-4567</p>
+                      <h4 className="font-bold text-[#2D3436]">Call Us Now</h4>
+                      <p className="text-sm text-[#636E72]">+1 (555) 123-4567</p>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-green-400 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-5 h-5 text-[#95E1D3] group-hover:translate-x-1 transition-transform" />
                   </a>
                   
-                  {/* WhatsApp */}
                   <a 
                     href="https://wa.me/15551234567"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-emerald-50 to-green-50 border border-emerald-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    className="group flex items-center gap-4 p-4 rounded-xl bg-[#F0FAF8] border-2 border-[#E8E8E8] hover:border-[#95E1D3] hover:shadow-md transition-all duration-300"
                   >
-                    <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-500 rounded-xl flex items-center justify-center text-2xl">
+                    <div className="w-12 h-12 bg-[#95E1D3] rounded-xl flex items-center justify-center text-white text-xl">
                       💬
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-bold text-slate-800">Chat on WhatsApp</h4>
-                      <p className="text-sm text-slate-500">Quick responses guaranteed</p>
+                      <h4 className="font-bold text-[#2D3436]">WhatsApp Chat</h4>
+                      <p className="text-sm text-[#636E72]">Quick responses</p>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-5 h-5 text-[#95E1D3] group-hover:translate-x-1 transition-transform" />
                   </a>
-                </div>
-              </div>
-
-              {/* Social Links */}
-              <div className="bg-white rounded-[2rem] p-8 shadow-xl border border-purple-100/50">
-                <h3 className="text-xl font-bold text-slate-800 mb-6 flex items-center gap-2">
-                  <Heart className="w-5 h-5 text-pink-500 fill-current" />
-                  Follow Our Fun!
-                </h3>
-                
-                <div className="flex gap-4">
-                  {[
-                    { icon: Facebook, color: 'from-blue-500 to-blue-600', label: 'Facebook' },
-                    { icon: Instagram, color: 'from-pink-500 to-rose-500', label: 'Instagram' },
-                    { icon: Youtube, color: 'from-red-500 to-red-600', label: 'YouTube' },
-                  ].map((social, i) => (
-                    <a
-                      key={i}
-                      href="#"
-                      className={`flex-1 p-4 rounded-xl bg-gradient-to-br ${social.color} text-white flex flex-col items-center gap-2 hover:shadow-lg hover:-translate-y-1 transition-all duration-300`}
-                    >
-                      <social.icon className="w-6 h-6" />
-                      <span className="text-sm font-semibold">{social.label}</span>
-                    </a>
-                  ))}
                 </div>
               </div>
             </div>
@@ -653,40 +528,28 @@ export default function Contact() {
       </section>
 
       {/* ================= FAQ SECTION ================= */}
-      <section className="relative py-20 md:py-28 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-confetti opacity-10"></div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
+      <section className="relative py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-100 text-yellow-700 font-semibold mb-4 animate-pop-in">
-              <HelpCircle className="w-4 h-4" />
-              Got Questions?
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
-              <span className="text-slate-800">Frequently Asked </span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-orange-500">
-                Questions
-              </span>
-              <span className="inline-block ml-2 animate-wiggle">🤔</span>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#2D3436]">
+              Frequently Asked Questions
             </h2>
-            
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Here are some common questions parents ask. Can't find your answer? Just reach out!
+            <p className="text-lg text-[#636E72] max-w-2xl mx-auto">
+              Find answers to common questions about our services
             </p>
           </div>
 
-          {/* FAQ Accordion */}
+          {/* Accordion */}
           <div className="space-y-4">
             {faqs.map((faq, i) => (
               <div
                 key={i}
                 className={`
-                  bg-white rounded-2xl border-2 overflow-hidden transition-all duration-300
+                  bg-white rounded-xl border-2 overflow-hidden transition-all duration-300
                   ${activeAccordion === i 
-                    ? 'border-purple-300 shadow-lg shadow-purple-100' 
-                    : 'border-slate-200 hover:border-purple-200'
+                    ? 'border-[#6EC1E4] shadow-lg' 
+                    : 'border-[#E8E8E8] hover:border-[#6EC1E4]/50'
                   }
                 `}
               >
@@ -694,36 +557,35 @@ export default function Contact() {
                   onClick={() => setActiveAccordion(activeAccordion === i ? null : i)}
                   className="w-full p-6 flex items-center gap-4 text-left"
                 >
-                  {/* Emoji */}
-                  <div className={`
-                    w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0
-                    transition-all duration-300
-                    ${activeAccordion === i ? 'bg-purple-100 scale-110' : 'bg-slate-100'}
-                  `}>
-                    {faq.emoji}
+                  <div 
+                    className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300"
+                    style={{ 
+                      backgroundColor: activeAccordion === i ? '#EBF7FC' : '#F8F9FA'
+                    }}
+                  >
+                    <HelpCircle className="w-5 h-5" style={{ 
+                      color: activeAccordion === i ? '#6EC1E4' : '#B2BEC3'
+                    }} />
                   </div>
                   
-                  {/* Question */}
                   <h3 className={`
                     flex-1 font-bold text-lg transition-colors
-                    ${activeAccordion === i ? 'text-purple-600' : 'text-slate-800'}
+                    ${activeAccordion === i ? 'text-[#6EC1E4]' : 'text-[#2D3436]'}
                   `}>
                     {faq.question}
                   </h3>
                   
-                  {/* Arrow */}
                   <ChevronDown className={`
-                    w-6 h-6 text-slate-400 transition-transform duration-300
-                    ${activeAccordion === i ? 'rotate-180 text-purple-500' : ''}
+                    w-6 h-6 transition-all duration-300
+                    ${activeAccordion === i ? 'rotate-180 text-[#6EC1E4]' : 'text-[#B2BEC3]'}
                   `} />
                 </button>
                 
-                {/* Answer */}
                 <div className={`
                   overflow-hidden transition-all duration-300
                   ${activeAccordion === i ? 'max-h-48' : 'max-h-0'}
                 `}>
-                  <p className="px-6 pb-6 pl-[88px] text-slate-600 leading-relaxed">
+                  <p className="px-6 pb-6 pl-[88px] text-[#636E72] leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -731,15 +593,14 @@ export default function Contact() {
             ))}
           </div>
 
-          {/* More Questions CTA */}
+          {/* CTA */}
           <div className="text-center mt-12">
-            <p className="text-slate-600 mb-4">
-              Still have questions? We're here to help! 
-              <span className="inline-block ml-2">💜</span>
+            <p className="text-[#636E72] mb-4">
+              Still have questions? We're here to help!
             </p>
             <a
               href="tel:+15551234567"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-[#6EC1E4] text-white rounded-full font-bold shadow-lg hover:bg-[#4DA8CE] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               <Phone className="w-5 h-5" />
               Call Us Anytime
@@ -747,7 +608,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
 
       <Footer />
     </main>
