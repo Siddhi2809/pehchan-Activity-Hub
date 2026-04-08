@@ -220,7 +220,7 @@ export default function Services() {
                   <div className="mb-6">
                     <h4 className="font-semibold text-[#2D3436] text-sm mb-3 flex items-center gap-2">
                       <Activity className="w-4 h-4" />
-                      Key Benefits:
+                      Additional:
                     </h4>
                     <ul className="space-y-2">
                       {service.benefits.slice(0, 3).map((benefit, idx) => (

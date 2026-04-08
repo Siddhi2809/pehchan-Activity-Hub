@@ -265,12 +265,12 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EBF7FC] text-[#6EC1E4] font-semibold mb-4 animate-pop-in">
+            <div className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#EBF7FC] text-[#6EC1E4] font-semibold text-base mb-4 animate-pop-in">
               <Sparkles className="w-4 h-4" />
               What We Offer
             </div>
             
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6">
               <span className="text-[#2D3436]">Our </span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6EC1E4] to-[#95E1D3]">
                 Fun Programs
@@ -278,7 +278,7 @@ export default function Home() {
               <span className="inline-block ml-2 animate-wiggle">🎨</span>
             </h2>
             
-            <p className="text-lg text-[#636E72] max-w-2xl mx-auto">
+            <p className="text-xl text-[#636E72] max-w-2xl mx-auto">
               Discover exciting activities designed to help your child grow stronger, 
               happier, and more confident every day!
             </p>
@@ -315,7 +315,7 @@ export default function Home() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-[#2D3436] text-center mb-3 transition-all duration-300">
+                <h3 className="text-xl font-bold text-[#2D3436] text-center mb-3">
                   {service.title}
                 </h3>
 

@@ -32,6 +32,7 @@ export default function About() {
       name: 'Mithali Bhadange',
       role: 'Dance Class Trainer',
       description: 'Expert in rhythmic movement and creative expression for young children.',
+      types:' Bollywood, Zumba, Indian & Classical',
       image: 'https://placehold.net/default.png',
       icon: Music,
       color: '#FF8C94',
@@ -133,7 +134,7 @@ export default function About() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#6EC1E4]/30 mb-6 shadow-sm">
             <div className="w-2 h-2 rounded-full bg-[#95E1D3] animate-pulse"></div>
-            <span className="text-sm font-semibold text-[#2D3436]">About Little Stars Therapy</span>
+            <span className="text-sm font-semibold text-[#2D3436]">About Pehchan Activity Hub</span>
           </div>
 
           {/* Main Heading */}
@@ -151,7 +152,7 @@ export default function About() {
 
           {/* Description */}
           <p className="text-xl md:text-2xl text-[#636E72] max-w-3xl mx-auto leading-relaxed mb-12">
-            At Little Stars, we combine professional expertise with genuine care to help 
+            At Pehchan Activity Hub, we combine professional expertise with genuine care to help 
             every child reach their full potential in a nurturing, supportive environment.
           </p>
 
@@ -175,49 +176,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* ================= VALUES SECTION ================= */}
-      <section className="relative py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#2D3436]">
-              Our Core Values
-            </h2>
-            <p className="text-lg text-[#636E72] max-w-2xl mx-auto">
-              The principles that guide our work and define who we are
-            </p>
-          </div>
 
-          {/* Values Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, i) => (
-              <div
-                key={i}
-                className="group p-8 rounded-2xl bg-white border-2 border-[#E8E8E8] hover:border-current hover:shadow-lg transition-all duration-300"
-                style={{ color: value.color }}
-              >
-                {/* Icon */}
-                <div 
-                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
-                  style={{ backgroundColor: `${value.color}15` }}
-                >
-                  <value.icon className="w-7 h-7" style={{ color: value.color }} />
-                </div>
-                
-                {/* Title */}
-                <h3 className="text-xl font-bold text-[#2D3436] mb-3">
-                  {value.title}
-                </h3>
-                
-                {/* Description */}
-                <p className="text-[#636E72] leading-relaxed text-sm">
-                  {value.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ================= FOUNDER SECTION ================= */}
       <section className="relative py-20 overflow-hidden">
@@ -283,10 +242,11 @@ export default function About() {
                 {/* Credentials */}
                 <div className="space-y-4 mb-8">
                   {[
-                    { icon: GraduationCap, label: 'PhD in Child Development Psychology' },
-                    { icon: Award, label: 'Certified Pediatric Therapist' },
-                    { icon: Users, label: 'Leading Team of 15+ Specialists' },
-                    { icon: TrendingUp, label: '500+ Successful Cases' },
+                    { icon: GraduationCap, label: 'Occupational Therapist – KEM Hospital, Mumbai' },
+                    { icon: Award, label: 'Certified Sensory Integration Therapist' },
+                    {icon: Award, label: 'Certified Professional Primitive Reflex Integration Therapist' },
+                    { icon: TrendingUp, label: 'Brain Gym 105 (Double Doodle)' },
+                    { icon: Shield, label: 'PAM AI OTA Certified' },
                   ].map((item, i) => (
                     <div 
                       key={i} 
@@ -314,10 +274,54 @@ export default function About() {
         </div>
       </section>
 
-      {/* ================= TIMELINE SECTION ================= */}
+            {/* ================= VALUES SECTION ================= */}
+      <section className="relative py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#2D3436]">
+              Our Core Values
+            </h2>
+            <p className="text-lg text-[#636E72] max-w-2xl mx-auto">
+              The principles that guide our work and define who we are
+            </p>
+          </div>
+
+          {/* Values Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {values.map((value, i) => (
+              <div
+                key={i}
+                className="group p-8 rounded-2xl bg-white border-2 border-[#E8E8E8] hover:border-current hover:shadow-lg transition-all duration-300"
+                style={{ color: value.color }}
+              >
+                {/* Icon */}
+                <div 
+                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
+                  style={{ backgroundColor: `${value.color}15` }}
+                >
+                  <value.icon className="w-7 h-7" style={{ color: value.color }} />
+                </div>
+                
+                {/* Title */}
+                <h3 className="text-xl font-bold text-[#2D3436] mb-3">
+                  {value.title}
+                </h3>
+                
+                {/* Description */}
+                <p className="text-[#636E72] leading-relaxed text-sm">
+                  {value.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= TIMELINE SECTION ================= 
       <section className="relative py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
+       
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#2D3436]">
               Our Journey
@@ -325,11 +329,11 @@ export default function About() {
             <p className="text-lg text-[#636E72]">
               A decade of dedication to children's wellbeing
             </p>
-          </div>
+          </div> 
 
-          {/* Timeline */}
+         
           <div className="relative">
-            {/* Center Line */}
+           
             <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#6EC1E4] to-[#95E1D3] hidden md:block"></div>
             
             <div className="space-y-12">
@@ -340,7 +344,6 @@ export default function About() {
                     i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                   }`}
                 >
-                  {/* Content Card */}
                   <div className={`flex-1 ${i % 2 === 0 ? 'md:text-right md:pr-12' : 'md:text-left md:pl-12'}`}>
                     <div className="bg-white p-6 rounded-2xl shadow-sm border-2 border-[#E8E8E8] hover:border-[#6EC1E4] transition-all duration-300">
                       <div className="inline-block px-3 py-1 bg-[#6EC1E4] text-white text-sm font-bold rounded-full mb-3">
@@ -351,12 +354,12 @@ export default function About() {
                     </div>
                   </div>
                   
-                  {/* Timeline Dot */}
+                 
                   <div className="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-white border-4 border-[#6EC1E4] rounded-full hidden md:block z-10">
                     <div className="absolute inset-0 bg-[#6EC1E4] rounded-full animate-ping opacity-75"></div>
                   </div>
                   
-                  {/* Empty Space */}
+                 
                   <div className="flex-1 hidden md:block"></div>
                 </div>
               ))}
@@ -424,6 +427,12 @@ export default function About() {
                     style={{ color: member.color }}
                   >
                     {member.role}
+                  </span>
+                   <span 
+                    className="block text-sm font-semibold text-center mb-4 uppercase tracking-wide"
+                    style={{ color: member.color }}
+                  >
+                    {member.types}
                   </span>
                   
                   {/* Description */}

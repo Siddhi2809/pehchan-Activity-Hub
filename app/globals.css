@@ -7,6 +7,14 @@
    🎨 PREMIUM KIDS THERAPY COLOR PALETTE
    ============================================ */
 :root {
+
+ 
+  --font-heading: 'Fredoka', 'Baloo 2', cursive;
+  --font-body: 'Nunito', 'Quicksand', sans-serif;
+  --font-ui: 'Poppins', 'Nunito', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-fun: 'Baloo 2', 'Comic Sans MS', cursive;
+
   /* ===== NEW PREMIUM PALETTE ===== */
   --sky-blue: #6EC1E4;
   --soft-yellow: #FFD166;
@@ -143,11 +151,13 @@
    ============================================ */
 @theme inline {
   /* Fonts - Playful & Readable */
-  --font-sans: 'Nunito', 'Geist', system-ui, sans-serif;
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback', monospace;
-  --font-heading: 'Fredoka', 'Nunito', 'Comic Sans MS', cursive;
-  --font-satisfy: var(--font-satisfy);
-  --font-playful: 'Baloo 2', 'Fredoka', cursive;
+ 
+  --font-heading: 'Fredoka', 'Baloo 2', cursive;
+  --font-body: 'Nunito', 'Quicksand', sans-serif;
+  --font-ui: 'Poppins', 'Nunito', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-fun: 'Baloo 2', 'Comic Sans MS', cursive;
+
   
   /* Colors */
   --color-background: var(--background);
@@ -214,16 +224,15 @@
     @apply border-border outline-ring/50;
   }
   
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    @apply bg-background text-foreground;
-    font-family: 'Nunito', 'Geist', system-ui, sans-serif;
-    overflow-x: hidden;
-    background-color: #FFF7E6;
-  }
+ html {
+  font-size: 16px; /* default medium */
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;   /* 16px */
+  line-height: 1.6;
+}
   
   /* Headings with playful font */
   h1, h2, h3, h4, h5, h6 {
