@@ -63,14 +63,38 @@ export default function RootLayout({
         ${fredoka.variable}
       `}
     >
-      <body className="font-sans antialiased text-foreground overflow-x-hidden">
-        {/* Floating Background Shapes */}
+      <body className="font-sans antialiased text-[#2D3436] bg-[#FFF7E6] overflow-x-hidden">
+        {/* Floating Background Shapes - Premium Colors */}
         <div className="floating-shapes" aria-hidden="true">
-          <div className="shape shape-1"></div>
-          <div className="shape shape-2"></div>
-          <div className="shape shape-3"></div>
-          <div className="shape shape-4"></div>
-          <div className="shape shape-5"></div>
+          {/* Sky Blue shape */}
+          <div 
+            className="shape shape-1" 
+            style={{ background: '#EBF7FC' }}
+          ></div>
+          
+          {/* Mint Green shape */}
+          <div 
+            className="shape shape-2" 
+            style={{ background: '#F0FAF8' }}
+          ></div>
+          
+          {/* Soft Yellow shape */}
+          <div 
+            className="shape shape-3" 
+            style={{ background: '#FFF8E5' }}
+          ></div>
+          
+          {/* Coral shape */}
+          <div 
+            className="shape shape-4" 
+            style={{ background: '#FFF0F1' }}
+          ></div>
+          
+          {/* Sky Blue shape (alternate) */}
+          <div 
+            className="shape shape-5" 
+            style={{ background: '#EBF7FC' }}
+          ></div>
         </div>
         
         {children}
