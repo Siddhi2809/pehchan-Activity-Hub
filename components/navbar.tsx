@@ -116,7 +116,7 @@ export function Navbar() {
             <div className="hidden lg:flex items-center">
               {/* Nav Links Container */}
               <div className={`
-                flex items-center gap-1 px-2 py-2 rounded-full transition-all duration-300
+                flex items-center gap-1 px-2 py-2 rounded-full transition-all duration-300 
                 ${scrolled ? 'bg-[#F8F9FA]' : 'bg-white/80 backdrop-blur-sm shadow-lg shadow-black/5'}
               `}>
                 {navLinks.map((link) => (

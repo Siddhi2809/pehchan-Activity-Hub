@@ -90,7 +90,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
       <Navbar />
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-10 pb-20 px-4 sm:px-6 lg:px-8">
         {/* Subtle Background */}
         <div className="absolute inset-0 z-0 opacity-30">
           <div 
@@ -121,9 +121,9 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
               </div>
 
               {/* Title */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] mb-6">
-                <span className="text-[#2D3436] block mb-2">{service.title}</span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r"
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] mb-2">
+                <span className="text-[#2D3436] block ">{service.title}</span>
+                <span className="text-[#2D3436] bg-clip-text bg-gradient-to-r"
                       style={{ 
                         backgroundImage: `linear-gradient(to right, ${serviceColor}, ${serviceColor}CC)` 
                       }}>
@@ -132,11 +132,11 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
               </h1>
 
               {/* Decorative Line */}
-              <div className="w-24 h-1 rounded-full mb-6"
+              <div className="w-24 h-1 rounded-full mb-2"
                    style={{ backgroundColor: serviceColor }}></div>
 
               {/* Description */}
-              <p className="text-xl text-[#636E72] leading-relaxed mb-8">
+              <p className="text-xl text-[#636E72] leading-relaxed mb-2">
                 {service.fullDescription}
               </p>
 
@@ -170,7 +170,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-3 px-8 py-4 text-white rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  className="inline-flex items-center gap-3 px-8 py-4 text-yellow rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                   style={{ backgroundColor: serviceColor }}
                 >
                   <Calendar className="w-5 h-5" />
@@ -224,7 +224,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
 
               {/* Popular Badge */}
               <div 
-                className="absolute -top-4 -right-4 px-4 py-2 text-white rounded-full shadow-lg text-sm font-bold"
+                className="absolute -top-4 -right-4 px-4 py-2 text-black rounded-full shadow-lg text-sm font-bold"
                 style={{ backgroundColor: serviceColor }}
               >
                 ⭐ Popular
