@@ -95,7 +95,7 @@ export default function Contact() {
       primary: 'Solartile Bussiness Hub,Wakad',
       color: '#6EC1E4',
       bgLight: '#EBF7FC',
-      action: 'https://maps.google.com',
+      action: 'https://www.google.com/maps/place/Kidz+Explore+Therapy+Center/@18.6012674,73.7739539,1651m/data=!3m1!1e3!4m6!3m5!1s0x3bc2b9e8d7fbec75:0x3b3a17c820559b68!8m2!3d18.6007727!4d73.7752227!16s%2Fg%2F11vx278m6t?entry=ttu&g_ep=EgoyMDI2MDQwNi4wIKXMDSoASAFQAw%3D%3D',
     },
     {
       icon: Clock,
@@ -470,7 +470,7 @@ export default function Contact() {
                       </div>
                       <p className="text-[#2D3436] font-semibold mb-2">Interactive Map</p>
                       <a 
-                        href="https://maps.google.com" 
+                        href="https://www.google.com/maps/place/Kidz+Explore+Therapy+Center/@18.6012674,73.7739539,1651m/data=!3m1!1e3!4m6!3m5!1s0x3bc2b9e8d7fbec75:0x3b3a17c820559b68!8m2!3d18.6007727!4d73.7752227!16s%2Fg%2F11vx278m6t?entry=ttu&g_ep=EgoyMDI2MDQwNi4wIKXMDSoASAFQAw%3D%3D" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-[#6EC1E4] hover:text-[#4DA8CE] text-sm font-medium"

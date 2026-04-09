@@ -159,7 +159,7 @@ export default function Home() {
             </div>
 
             {/* Tagline - Mint Green */}
-            <span className="font-satisfy text-4xl md:text-5xl text-blue-400 block mb-4 animate-slide-up">
+            <span className="font-extrabold text-4xl md:text-5xl text-blue-400 block mb-4 animate-slide-up">
               Where Kids Shine Bright ✨
             </span>
 

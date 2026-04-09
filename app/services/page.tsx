@@ -91,8 +91,8 @@ export default function Services() {
   ]
 
   const stats = [
-    { number: '500+', label: 'Children Served', color: '#6EC1E4' },
-    { number: '15+', label: 'Specialists', color: '#95E1D3' },
+    { number: '200+', label: 'Children Served', color: '#6EC1E4' },
+    { number: '8+', label: 'Specialists', color: '#95E1D3' },
     { number: '98%', label: 'Success Rate', color: '#FFD166' },
     { number: '10+', label: 'Years Experience', color: '#FF8C94' },
   ]
