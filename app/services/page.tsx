@@ -362,7 +362,7 @@ export default function Services() {
             {/* Left - Content */}
             <div>
               <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-[#2D3436]">
-                Why Choose Little Stars?
+                Why Choose Pehchan Activity Hub?
               </h2>
               
               <p className="text-lg text-[#636E72] mb-8 leading-relaxed">
@@ -421,7 +421,7 @@ export default function Services() {
                     ))}
                   </div>
                   <p className="text-[#636E72] italic text-sm leading-relaxed mb-3">
-                    "The team at Little Stars has been incredible. Our daughter has made 
+                    "The team at Pehchan Activity Hub has been incredible. Our daughter has made 
                     amazing progress and actually looks forward to her sessions."
                   </p>
                   <div className="flex items-center gap-3">

@@ -31,7 +31,7 @@ export default function About() {
     {
       name: 'Mithali Bhadange',
       role: 'Dance Class Trainer',
-      description: 'Expert in rhythmic movement and creative expression for young children.',
+      description: 'Hello, I am Mitali Bhadange, a professional Odissi dancer with ten years of experience, a graduate in Odissi Dance, a Gold Medalist, and a Guinness World Record holder. I have performed on national and international stages, and I am now starting Dance Classes for children in Pune at Kidz Explore Therapy Center, Solitaire Business Hub, Wakad.',
       types:' Bollywood, Zumba, Indian & Classical',
       image: 'https://placehold.net/default.png',
       icon: Music,
@@ -41,7 +41,8 @@ export default function About() {
     {
       name: 'Tushar Sawane',
       role: 'Martial Arts Instructor',
-      description: 'Specializes in teaching discipline, focus, and strength through martial arts.',
+      description: 'Hello, I am Tushar sawane, Certified fitness trainer And sport nutritionist.Black belt in karate and taekwondo Former Head of sports in reputed international school .18 yrs of teaching experience in martial arts and sports.International gold medalist in karate..',
+      types:'Karate, Taekwondo',
       image: 'https://placehold.net/default.png',
       icon: Shield,
       color: '#6EC1E4',
@@ -50,8 +51,9 @@ export default function About() {
     {
       name: 'Pratik Lohakare',
       role: 'Music Therapy Instructor',
-      description: 'Uses music and melody to support emotional and cognitive child development.',
-      image: 'https://placehold.net/default.png',
+      description: 'Hello, I am Pratik Lohakare,  qualified music professional with a B.A. in Music and a Tabla Visharad certification. With over 10 years of experience working with children with special needs, he uses music as a powerful tool for healing, emotional expression, and joyful development.',
+      types:'Djembe, Piano, Tabla',
+      image: '/pratik.jpg',
       icon: Sparkles,
       color: '#FFD166',
       bgLight: '#FFF8E5',
@@ -59,8 +61,8 @@ export default function About() {
     {
       name: 'Machendra',
       role: 'Kids Yoga Trainer',
-      description: 'Focuses on mindfulness, flexibility, and peaceful body awareness for children.',
-      image: 'https://placehold.net/default.png',
+      description: 'Machhindra Changdev Rode, based in Sangamner, is a qualified yoga professional with an M.Com (SET) and experience as an Assistant Professor at a senior college for 5 years. He holds a Diploma in Yoga and Naturopathy from Tilak Maharashtra University, Pune, and has completed a 200-hour Teacher Training Course in Bangalore, where he also gained 2 years of teaching experience. Currently in Pune, he is pursuing an MA in Yogashastra from Kavikulaguru Sanskrit University, Nagpur, further strengthening his expertise in yoga and holistic wellness.',
+      image: '/machendra.jpg',
       icon: Flower2,
       color: '#95E1D3',
       bgLight: '#F0FAF8',
@@ -68,8 +70,8 @@ export default function About() {
     {
       name: 'Vaishnavi Dahake',
       role: 'Child Nutritionist & Dietician',
-      description: 'Expert nutritional guidance for healthy growth and balanced eating habits.',
-      image: 'https://placehold.net/default.png',
+      description: 'Dt. Vaishnavi Dahake is a certified Clinical Dietitian with an M.Sc. in Clinical Nutrition and Dietetics from SNDT College, Pune, and hands-on experience at Sancheti Rehabilitation Hospital and KEM Hospital, Pune. She specializes in children’s gut health, immunity, and holistic nutrition, offering personalized diet plans, consultation, and family nutrition guidance. Her work also includes a published e-book on PCOS, reflecting her expertise in sustainable and health-focused nutrition.',
+      image: '/vaishnavi.jpg',
       icon: Apple,
       color: '#95E1D3',
       bgLight: '#F0FAF8',
@@ -104,14 +106,14 @@ export default function About() {
   ]
 
   const stats = [
-    { number: '500+', label: 'Children Served', color: '#6EC1E4' },
+    { number: '200+', label: 'Children Served', color: '#6EC1E4' },
     { number: '10+', label: 'Years Experience', color: '#FFD166' },
-    { number: '15+', label: 'Expert Therapists', color: '#95E1D3' },
+    { number: '8+', label: 'Expert Therapists', color: '#95E1D3' },
     { number: '98%', label: 'Success Rate', color: '#FF8C94' },
   ]
 
   const milestones = [
-    { year: '2014', title: 'Foundation', description: 'Little Stars Therapy Center was established with a vision to transform children\'s lives' },
+    { year: '2014', title: 'Foundation', description: 'Pehchan Activity Hub Therapy Center was established with a vision to transform children\'s lives' },
     { year: '2017', title: 'Expansion', description: 'Grew our team to 10 specialists and added new therapy programs' },
     { year: '2020', title: 'Community Impact', description: 'Reached milestone of serving 500+ families in our community' },
     { year: '2024', title: 'Leading Excellence', description: 'Recognized as a premier pediatric therapy center with innovative approaches' },
@@ -124,7 +126,7 @@ export default function About() {
       {/* ================= HERO SECTION ================= */}
       <section className="relative pt-10 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Subtle Background Elements */}
-        <div className="absolute inset-0 z-0 opacity-30">
+        <div className="absolute inset-0 z-0 opacity-0">
           <div className="absolute top-20 right-10 w-64 h-64 bg-[#EBF7FC] rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 left-10 w-80 h-80 bg-[#F0FAF8] rounded-full blur-3xl"></div>
         </div>
@@ -192,7 +194,7 @@ export default function About() {
                 {/* Main Image Container */}
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://placehold.net/default.png"
+                    src="/asmita.jpg"
                     alt="Dr. Asmita Shirsat"
                     fill
                     className="object-cover"
@@ -236,7 +238,7 @@ export default function About() {
                 {/* Quote */}
                 <blockquote className="text-lg text-[#636E72] mb-8 leading-relaxed">
                   "Every child deserves a nurturing environment where they can grow at their own pace. 
-                  At Little Stars, we don't just provide therapy – we build foundations for lifelong success."
+                  At Pehchan Activity Hub, we don't just provide therapy – we build foundations for lifelong success."
                 </blockquote>
 
                 {/* Credentials */}

@@ -45,6 +45,7 @@ export default function Home() {
       iconColor: 'text-[#FF8C94]',
       borderHover: 'hover:border-[#FF8C94]',
       delay: 0,
+      image: '/dance.jpg'
     },
     {
       title: 'Music Therapy',
@@ -56,6 +57,7 @@ export default function Home() {
       iconColor: 'text-[#E6A800]',
       borderHover: 'hover:border-[#FFD166]',
       delay: 100,
+      image: '/music-therapy.jpg'
     },
     {
       title: 'Kids Yoga',
@@ -68,6 +70,7 @@ export default function Home() {
       borderHover: 'hover:border-[#95E1D3]',
       highlight: true,
       delay: 200,
+      image: '/yoga1.jpg'
     },
     {
       title: 'Martial Arts',
@@ -79,6 +82,7 @@ export default function Home() {
       iconColor: 'text-[#6EC1E4]',
       borderHover: 'hover:border-[#6EC1E4]',
       delay: 300,
+      image: '/martial-arts.jpg'
     },
     {
       title: 'Nutrition & Diet',
@@ -90,12 +94,13 @@ export default function Home() {
       iconColor: 'text-[#95E1D3]',
       borderHover: 'hover:border-[#95E1D3]',
       delay: 400,
+      image: '/nutrition.jpg'
     },
   ]
 
   const stats = [
-    { number: '500+', label: 'Happy Kids', icon: '😊' },
-    { number: '15+', label: 'Expert Therapists', icon: '👨‍⚕️' },
+    { number: '200+', label: 'Happy Kids', icon: '😊' },
+    { number: '8+', label: 'Expert Therapists', icon: '👨‍⚕️' },
     { number: '6+', label: 'Fun Programs', icon: '🎨' },
     { number: '98%', label: 'Parent Satisfaction', icon: '⭐' },
   ]
@@ -150,11 +155,11 @@ export default function Home() {
             {/* Badge - Soft Yellow */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FFF8E5] border-2 border-[#FFD166] mb-6 animate-pop-in">
               <span className="text-2xl animate-wave">👋</span>
-              <span className="font-semibold text-[#2D3436]">Welcome to Little Stars!</span>
+              <span className="font-semibold text-[#2D3436]">Welcome to Pehchan Activity Hub!</span>
             </div>
 
             {/* Tagline - Mint Green */}
-            <span className="font-satisfy text-4xl md:text-5xl text-[#95E1D3] block mb-4 animate-slide-up">
+            <span className="font-satisfy text-4xl md:text-5xl text-blue-400 block mb-4 animate-slide-up">
               Where Kids Shine Bright ✨
             </span>
 
@@ -441,7 +446,7 @@ export default function Home() {
               </h2>
 
               <p className="text-lg text-[#636E72] mb-6 leading-relaxed">
-                At <span className="font-bold text-[#6EC1E4]">Little Stars Therapy</span>, 
+                At <span className="font-bold text-[#6EC1E4]">Pehchan Activity Hub </span>
                 we believe every child has unique superpowers waiting to be discovered! 
                 Our caring team creates a safe, fun environment where kids can 
                 learn, grow, and shine bright.
@@ -516,15 +521,15 @@ export default function Home() {
           {/* Team Grid - Hexagon Style */}
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 max-w-5xl mx-auto mb-12">
             {[
-              { emoji: '⭐', color: '#6EC1E4' },
-              { emoji: '💜', color: '#95E1D3' },
-              { emoji: '🌟', color: '#FFD166' },
-              { emoji: '💪', color: '#FF8C94' },
-              { emoji: '🎨', color: '#6EC1E4' },
-              { emoji: '🎵', color: '#95E1D3' },
-              { emoji: '🧘', color: '#FFD166' },
-              { emoji: '🥋', color: '#FF8C94' },
-              { emoji: '🍎', color: '#95E1D3' },
+              { emoji: '⭐', color: '#6EC1E4', image: '/dance1.jpg' },
+              { emoji: '💜', color: '#95E1D3', image: '/music-therapy1.jpg' },
+              { emoji: '🌟', color: '#FFD166', image: '/yoga5.jpg' },
+              { emoji: '💪', color: '#FF8C94', image: '/pratik.jpg' },
+              { emoji: '🎨', color: '#6EC1E4', image: '/vaishnavi.jpg' },
+              { emoji: '🎵', color: '#95E1D3', image: '/team-6.jpg' },
+              { emoji: '🧘', color: '#FFD166', image: '/team-7.jpg' },
+              { emoji: '🥋', color: '#FF8C94', image: '/team-8.jpg' },
+              { emoji: '🍎', color: '#95E1D3', image: '/team-9.jpg' },
             ].map((member, i) => (
               <div
                 key={i}
@@ -535,7 +540,7 @@ export default function Home() {
                 <div className="relative w-full h-full overflow-hidden rounded-2xl transform rotate-0 group-hover:rotate-6 transition-transform duration-500 border-2 border-[#E8E8E8] group-hover:border-current"
                      style={{ borderColor: member.color }}>
                   <Image
-                    src="https://placehold.net/default.png"
+                    src={member.image || '/default-team.jpg'}
                     alt={`Team member ${i + 1}`}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"

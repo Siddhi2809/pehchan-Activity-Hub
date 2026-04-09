@@ -74,26 +74,25 @@ export default function Contact() {
     {
       icon: Phone,
       title: 'Call Us',
-      primary: '+1 (555) 123-4567',
+      primary: '+91 7039337562',
       secondary: 'Mon-Fri 9AM-6PM',
       color: '#95E1D3',
       bgLight: '#F0FAF8',
-      action: 'tel:+15551234567',
+      action: 'tel:+917039337562',
     },
     {
       icon: Mail,
       title: 'Email Us',
-      primary: 'hello@littlestars.com',
+      primary: 'asmita@kidzexploretherapy.com',
       secondary: 'Response within 24 hours',
       color: '#FF8C94',
       bgLight: '#FFF0F1',
-      action: 'mailto:hello@littlestars.com',
+      action: 'mailto:asmita@kidzexploretherapy.com',
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      primary: '123 Rainbow Lane',
-      secondary: 'Sunshine City, ST 12345',
+      primary: 'Solartile Bussiness Hub,Wakad',
       color: '#6EC1E4',
       bgLight: '#EBF7FC',
       action: 'https://maps.google.com',
@@ -458,7 +457,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-bold text-lg">Visit Our Center</h3>
-                      <p className="text-white/90 text-sm">123 Rainbow Lane, Sunshine City</p>
+                      <p className="text-white/90 text-sm">Solartile Bussiness Hub,Wakad</p>
                     </div>
                   </div>
                 </div>
@@ -492,7 +491,7 @@ export default function Contact() {
                 
                 <div className="space-y-4">
                   <a 
-                    href="tel:+15551234567"
+                    href="tel:+917039337562"
                     className="group flex items-center gap-4 p-4 rounded-xl bg-[#F0FAF8] border-2 border-[#E8E8E8] hover:border-[#95E1D3] hover:shadow-md transition-all duration-300"
                   >
                     <div className="w-12 h-12 bg-[#95E1D3] rounded-xl flex items-center justify-center text-white">
@@ -500,7 +499,7 @@ export default function Contact() {
                     </div>
                     <div className="flex-1">
                       <h4 className="font-bold text-[#2D3436]">Call Us Now</h4>
-                      <p className="text-sm text-[#636E72]">+1 (555) 123-4567</p>
+                      <p className="text-sm text-[#636E72]">+91 7039337562</p>
                     </div>
                     <ArrowRight className="w-5 h-5 text-[#95E1D3] group-hover:translate-x-1 transition-transform" />
                   </a>

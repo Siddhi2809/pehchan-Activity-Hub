@@ -193,7 +193,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
               {/* Main Image Container */}
               <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl border-4 border-white">
                 <Image
-                  src="https://placehold.net/default.png"
+                  src={service.seviceimage || '/default-service.jpg'}
                   alt={service.title}
                   fill
                   className="object-cover"
@@ -374,13 +374,16 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
                   className="w-48 h-48 md:w-56 md:h-56 rounded-2xl flex items-center justify-center shadow-lg border-4 border-white overflow-hidden"
                   style={{ backgroundColor: serviceBgLight }}
                 >
-                  <Image
-                    src="https://placehold.net/default.png"
-                    alt={service.trainer}
-                    fill
-                    className="object-cover"
-                  />
-                  <User size={80} className="opacity-30" style={{ color: serviceColor }} />
+                  {service.image ? (
+                    <Image
+                      src={service.image}
+                      alt={service.trainer}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <User size={80} className="opacity-30" style={{ color: serviceColor }} />
+                  )}
                 </div>
                 
                 {/* Badge */}
@@ -414,15 +417,15 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
                   <Quote className="absolute -top-2 -left-2 w-8 h-8 opacity-20" 
                          style={{ color: serviceColor }} />
                   <p className="text-lg text-[#636E72] leading-relaxed pl-6">
-                    "I'm passionate about helping every child discover their potential through {service.title.toLowerCase()}. 
-                    Each session is designed to be both fun and developmentally beneficial."
+                    {service.information} 
+                   
                   </p>
                 </div>
 
                 {/* Stats */}
                 <div className="flex flex-wrap gap-4 mb-8">
                   {[
-                    { label: 'Experience', value: '8+ Years' },
+                    { label: 'Experience', value: `${service.experience}+ Years` },
                     { label: 'Children Helped', value: '200+' },
                     { label: 'Rating', value: '4.9/5' },
                   ].map((stat, i) => (
@@ -436,7 +439,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
                 {/* CTA */}
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-3 px-8 py-4 text-white rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  className="inline-flex items-center gap-3 px-8 py-4 text-blacknded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                   style={{ backgroundColor: serviceColor }}
                 >
                   <Calendar className="w-5 h-5" />

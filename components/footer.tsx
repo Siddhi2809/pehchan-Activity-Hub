@@ -10,6 +10,7 @@ import {
   Facebook,
   Youtube,
   Twitter,
+  Linkedin,
   Send,
   Clock,
   Sparkles
@@ -35,10 +36,10 @@ export function Footer() {
   ]
   
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook', color: 'hover:bg-[#6EC1E4]' },
-    { icon: Instagram, href: '#', label: 'Instagram', color: 'hover:bg-[#FF8C94]' },
+    { icon: Facebook, href: 'https://www.facebook.com/people/Kidz-explore-therapy-center/61558108090247/', label: 'Facebook', color: 'hover:bg-[#6EC1E4]' },
+    { icon: Instagram, href: 'https://www.instagram.com/kidzexplore1?igsh=MThuY3U0d2NmaTNibQ%3D%3D', label: 'Instagram', color: 'hover:bg-[#FF8C94]' },
     { icon: Youtube, href: '#', label: 'Youtube', color: 'hover:bg-[#FF8C94]' },
-    { icon: Twitter, href: '#', label: 'Twitter', color: 'hover:bg-[#6EC1E4]' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/dr-asmita-shirsat-aa135a2a3/', label: 'Linkedin', color: 'hover:bg-[#6EC1E4]' },
   ]
 
   return (
@@ -137,9 +138,9 @@ export function Footer() {
                 </div>
                 <div>
                   <span className="text-2xl font-extrabold text-white block">
-                    Little Stars
+                  Phechan
                   </span>
-                  <span className="text-white/70 text-sm">Kids Therapy ✨</span>
+                  <span className="text-white/70 text-sm">Activity Hub ✨</span>
                 </div>
               </Link>
               
@@ -242,7 +243,7 @@ export function Footer() {
                     </div>
                     <div>
                       <span className="block text-xs text-white/60 mb-0.5">Call Us</span>
-                      <span className="font-semibold">+1 (555) 123-4567</span>
+                      <span className="font-semibold">+91 7039337562</span>
                     </div>
                   </a>
                 </li>
@@ -250,7 +251,7 @@ export function Footer() {
                 {/* Email */}
                 <li>
                   <a
-                    href="mailto:hello@littlestars.com"
+                    href="mailto:asmita@kidzexploretherapy.com"
                     className="group flex items-start gap-3 text-white/80 hover:text-white transition-colors"
                   >
                     <div className="w-10 h-10 rounded-xl bg-[#FF8C94]/30 backdrop-blur-sm flex items-center justify-center flex-shrink-0 group-hover:bg-[#FF8C94]/40 transition-colors">
@@ -258,7 +259,7 @@ export function Footer() {
                     </div>
                     <div>
                       <span className="block text-xs text-white/60 mb-0.5">Email Us</span>
-                      <span className="font-semibold">hello@littlestars.com</span>
+                      <span className="font-semibold">asmita@kidzexploretherapy.com</span>
                     </div>
                   </a>
                 </li>
@@ -271,7 +272,7 @@ export function Footer() {
                     </div>
                     <div>
                       <span className="block text-xs text-white/60 mb-0.5">Visit Us</span>
-                      <span className="font-semibold">123 Rainbow Lane,<br />Sunshine City, ST 12345</span>
+                      <span className="font-semibold">Solitaire Business Hub, Wakad,</span>
                     </div>
                   </div>
                 </li>
@@ -303,7 +304,7 @@ export function Footer() {
               
               {/* Copyright */}
               <p className="text-white/70 text-sm flex items-center gap-2">
-                <span>© {currentYear} Little Stars Therapy.</span>
+                <span>© {currentYear} Pehchan Activity Hub Therapy.</span>
                 <span className="hidden sm:inline">Made with</span>
                 <Heart className="w-4 h-4 text-[#FF8C94] fill-current animate-heartbeat hidden sm:inline" />
                 <span className="hidden sm:inline">for little ones</span>
@@ -336,7 +337,7 @@ export function Footer() {
                     </span>
                   ))}
                 </div>
-                <span>little stars</span>
+                <span>Pehchan Activity Hub</span>
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal } from 'react'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { 
@@ -14,7 +14,6 @@ import {
   Quote,
   Play,
   Filter,
-  Grid3X3,
   Users,
   TrendingUp
 } from 'lucide-react'
@@ -24,111 +23,46 @@ export default function Gallery() {
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
+  // ✅ HERO SLIDER
+  const heroImages = [
+    '/yoga1.jpg',
+    'music1.jpg',
+    '/yoga5.jpg',
+    '/yoga6.jpg',
+  ]
+
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length)
+    }, 4000)
+
+    return () => clearInterval(interval)
+  }, [])
+
   const categories = [
     { id: 'all', label: 'All', count: 12 },
-    { id: 'sessions', label: 'Therapy Sessions', count: 4 },
-    { id: 'activities', label: 'Activities', count: 3 },
-    { id: 'events', label: 'Events', count: 3 },
-    { id: 'success', label: 'Success Stories', count: 2 },
+    { id: 'sessions', label: 'Dance Classes', count: 4 },
+    { id: 'activities', label: 'Kids Yoga', count: 4 },
+    { id: 'events', label: 'Martial Arts', count: 3 },
+    { id: 'success', label: 'Music Therapy', count: 2 },
+    { id: 'nutrition', label: 'Nutrition & Diet', count: 2 },
   ]
 
   const galleryItems = [
-    { 
-      id: 1, 
-      title: 'Dance Class', 
-      image: 'https://placehold.net/default.png', 
-      category: 'activities',
-      color: '#FF8C94',
-      icon: '💃'
-    },
-    { 
-      id: 2, 
-      title: 'Music Therapy', 
-      image: 'https://placehold.net/default.png', 
-      category: 'sessions',
-      color: '#FFD166',
-      icon: '🎵'
-    },
-    { 
-      id: 3, 
-      title: 'Kids Yoga', 
-      image: 'https://placehold.net/default.png', 
-      category: 'sessions',
-      color: '#95E1D3',
-      icon: '🧘'
-    },
-    { 
-      id: 4, 
-      title: 'Creative Arts', 
-      image: 'https://placehold.net/default.png', 
-      category: 'activities',
-      color: '#6EC1E4',
-      icon: '🎨'
-    },
-    { 
-      id: 5, 
-      title: 'Annual Celebration', 
-      image: 'https://placehold.net/default.png', 
-      category: 'events',
-      color: '#FFD166',
-      icon: '🎉'
-    },
-    { 
-      id: 6, 
-      title: 'Martial Arts', 
-      image: 'https://placehold.net/default.png', 
-      category: 'sessions',
-      color: '#6EC1E4',
-      icon: '🥋'
-    },
-    { 
-      id: 7, 
-      title: 'Student Progress', 
-      image: 'https://placehold.net/default.png', 
-      category: 'success',
-      color: '#95E1D3',
-      icon: '⭐'
-    },
-    { 
-      id: 8, 
-      title: 'Group Activities', 
-      image: 'https://placehold.net/default.png', 
-      category: 'activities',
-      color: '#6EC1E4',
-      icon: '👫'
-    },
-    { 
-      id: 9, 
-      title: 'Special Events', 
-      image: 'https://placehold.net/default.png', 
-      category: 'events',
-      color: '#FF8C94',
-      icon: '🎂'
-    },
-    { 
-      id: 10, 
-      title: 'Nutrition Workshop', 
-      image: 'https://placehold.net/default.png', 
-      category: 'sessions',
-      color: '#95E1D3',
-      icon: '🥗'
-    },
-    { 
-      id: 11, 
-      title: 'Achievement', 
-      image: 'https://placehold.net/default.png', 
-      category: 'success',
-      color: '#FFD166',
-      icon: '🏆'
-    },
-    { 
-      id: 12, 
-      title: 'Sports Day', 
-      image: 'https://placehold.net/default.png', 
-      category: 'events',
-      color: '#6EC1E4',
-      icon: '🏃'
-    },
+    { id: 1, title: 'Dance Class', image: 'https://placehold.net/default.png', category: 'sessions', color: '#FF8C94', icon: '💃' },
+    { id: 2, title: 'Music Therapy', image: '/music1.jpg', category: 'success', color: '#FFD166', icon: '🎵' },
+    { id: 3, title: 'Kids Yoga', image: '/yoga1.jpg', category: 'activities', color: '#95E1D3', icon: '🧘' },
+    { id: 4, title: 'Martial Arts', image: 'https://placehold.net/default.png', category: 'events', color: '#6EC1E4', icon: '🥋' },
+    { id: 5, title: 'Music Therapy', image: 'https://placehold.net/default.png', category: 'success', color: '#FFD166', icon: '🎉' },
+    { id: 6, title: 'Martial Arts', image: 'https://placehold.net/default.png', category: 'events', color: '#6EC1E4', icon: '🥋' },
+    { id: 7, title: 'nutrition & diet', image: 'https://placehold.net/default.png', category: 'nutrition', color: '#95E1D3', icon: '⭐' },
+    { id: 8, title: 'kidz yoga', image: '/yoga3.jpg', category: 'activities', color: '#95E1D3', icon: '⭐' },
+    { id: 9, title: 'kidz yoga', image: '/yoga6.jpg', category: 'activities', color: '#FF8C94', icon: '🎂' },
+    { id: 10, title: 'Nutrition Workshop', image: 'https://placehold.net/default.png', category: 'sessions', color: '#95E1D3', icon: '🥗' },
+    { id: 11, title: 'kidz yoga', image: '/yoga5.jpg', category: 'activities', color: '#FFD166', icon: '🏆' },
+    { id: 12, title: 'Sports Day', image: 'https://placehold.net/default.png', category: 'events', color: '#6EC1E4', icon: '🏃' },
   ]
 
   const filteredItems = activeCategory === 'all' 
@@ -136,42 +70,9 @@ export default function Gallery() {
     : galleryItems.filter(item => item.category === activeCategory)
 
   const testimonials = [
-    {
-      name: 'Sarah & Tom',
-      child: 'Emma, 7',
-      text: 'The therapists at Little Stars have been incredible. We\'ve seen amazing progress in Emma\'s confidence and social skills.',
-      rating: 5,
-    },
-    {
-      name: 'Michael',
-      child: 'Liam, 9',
-      text: 'Liam was struggling with anxiety, but the personalized approach here has made all the difference.',
-      rating: 5,
-    },
-    {
-      name: 'Jennifer',
-      child: 'Sophie, 5',
-      text: 'The caring environment makes Sophie look forward to her sessions. That\'s when you know it\'s the right place.',
-      rating: 5,
-    },
-    {
-      name: 'David & Lisa',
-      child: 'Noah, 8',
-      text: 'The expertise and compassion here is unmatched. Noah has improved tremendously in just a few months.',
-      rating: 5,
-    },
-    {
-      name: 'Amanda',
-      child: 'Olivia, 6',
-      text: 'Our daughter was shy and withdrawn, but now she\'s blooming! The therapists truly care about each child.',
-      rating: 5,
-    },
-    {
-      name: 'Robert',
-      child: 'Lucas, 10',
-      text: 'Excellent communication from the team. They keep us updated and involve us every step of the way.',
-      rating: 5,
-    },
+    { rating: 5, text: "Pehchan Activity Hub has been transformative for our child. The therapists are wonderful and caring.", name: "Sarah Johnson", child: "Emma" },
+    { rating: 5, text: "The activities and therapy sessions have really helped our son's development. Highly recommended!", name: "Michael Chen", child: "Alex" },
+    { rating: 5, text: "A warm and welcoming center. Our daughter loves coming here for her music therapy sessions.", name: "Priya Patel", child: "Aisha" },
   ]
 
   const openLightbox = (index: number) => {
@@ -197,55 +98,56 @@ export default function Gallery() {
     <main className="min-h-screen bg-[#FFF7E6] overflow-hidden">
       <Navbar />
 
-      {/* ================= HERO SECTION ================= */}
-      <section className="relative pt-10 pb-20 px-4 sm:px-6 lg:px-8">
-        {/* Subtle Background */}
-        <div className="absolute inset-0 z-0 opacity-30">
-          <div className="absolute top-20 right-10 w-96 h-96 bg-[#EBF7FC] rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 left-10 w-80 h-80 bg-[#F0FAF8] rounded-full blur-3xl"></div>
+      {/* ================= HERO SECTION (UPDATED) ================= */}
+      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+
+        {/* Background Slider */}
+        <div className="absolute inset-0 z-0">
+          {heroImages.map((img, index) => (
+            <Image
+              key={index}
+              src={img}
+              alt="gallery"
+              fill
+              className={`object-cover transition-opacity duration-1000 ${
+                index === currentSlide ? 'opacity-100' : 'opacity-0'
+              }`}
+            />
+          ))}
+
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
         {/* Content */}
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#6EC1E4]/30 mb-6 shadow-sm">
+        <div className="relative z-10 text-center text-white px-4 max-w-4xl">
+          
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-md mb-6">
             <div className="w-2 h-2 rounded-full bg-[#95E1D3] animate-pulse"></div>
-            <span className="text-sm font-semibold text-[#2D3436]">Photo Gallery</span>
+            <span className="text-sm font-semibold">Photo Gallery</span>
           </div>
 
-          {/* Main Heading */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6">
-            <span className="text-[#2D3436] block mb-2">Moments That</span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6EC1E4] to-[#95E1D3]">
-              Matter
-            </span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-yellow-400">
+            Moments That Matter
           </h1>
 
-          {/* Decorative Line */}
           <div className="flex justify-center mb-6">
             <div className="w-24 h-1 bg-gradient-to-r from-[#6EC1E4] to-[#95E1D3] rounded-full"></div>
           </div>
 
-          {/* Description */}
-          <p className="text-xl md:text-2xl text-[#636E72] max-w-2xl mx-auto leading-relaxed mb-12">
+          <p className="text-lg md:text-xl max-w-2xl mx-auto mb-10 text-white/90">
             A collection of special moments capturing growth, joy, and achievement 
-            at Little Stars Therapy Center.
+            at Pehchan Activity Hub Therapy Center.
           </p>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-            {[
-              { icon: Camera, value: '500+', label: 'Photos' },
-              { icon: Users, value: '200+', label: 'Children' },
-              { icon: TrendingUp, value: '50+', label: 'Events' },
-            ].map((stat, i) => (
-              <div key={i} className="text-center">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-[#EBF7FC] flex items-center justify-center">
-                  <stat.icon className="w-6 h-6 text-[#6EC1E4]" />
-                </div>
-                <div className="text-2xl font-bold text-[#2D3436]">{stat.value}</div>
-                <div className="text-sm text-[#636E72]">{stat.label}</div>
-              </div>
+          {/* Dots */}
+          <div className="flex justify-center gap-2 mt-6">
+            {heroImages.map((_, index) => (
+              <div
+                key={index}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  currentSlide === index ? 'w-6 bg-white' : 'w-2 bg-white/50'
+                }`}
+              />
             ))}
           </div>
         </div>
@@ -437,13 +339,13 @@ export default function Gallery() {
               Parent Testimonials
             </h2>
             <p className="text-lg text-[#636E72] max-w-2xl mx-auto">
-              Hear from families about their experience at Little Stars
+              Hear from families about their experience at Pehchan Activity Hub
             </p>
           </div>
 
           {/* Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial: { rating: any; text: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; name: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; child: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined }, index: Key | null | undefined) => (
               <div
                 key={index}
                 className="bg-white p-8 rounded-2xl shadow-sm border-2 border-[#E8E8E8] hover:shadow-lg hover:border-[#6EC1E4] transition-all duration-300"

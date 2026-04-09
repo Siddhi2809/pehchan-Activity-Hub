@@ -25,8 +25,8 @@ const fredoka = Fredoka({
 })
 
 export const metadata: Metadata = {
-  title: 'Little Stars Therapy | Where Kids Shine Bright ⭐',
-  description: 'A warm, welcoming therapy center for children with experienced therapists providing personalized care in a safe, playful environment.',
+  title: 'Pehchan Activity Hub | Where Kids Shine Bright ⭐',
+  description: 'A warm, welcoming Activity Hub for children with experienced therapists providing personalized care in a safe, playful environment.',
   generator: 'v0.app',
   icons: {
     icon: [
