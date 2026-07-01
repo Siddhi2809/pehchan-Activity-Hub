@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
+import { PopupForm } from '@/components/PopupForm'
 import { 
   Users, 
   Pill, 
@@ -622,6 +623,7 @@ export default function Home() {
       </section>
 
       <Footer />
+      <PopupForm />
     </main>
   )
 }
