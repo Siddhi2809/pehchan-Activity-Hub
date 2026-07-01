@@ -27,24 +27,8 @@ const fredoka = Fredoka({
 export const metadata: Metadata = {
   title: 'Pehchan Activity Hub | Where Kids Shine Bright ⭐',
   description: 'A warm, welcoming Activity Hub for children with experienced therapists providing personalized care in a safe, playful environment.',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
+  
+  
 }
 
 export default function RootLayout({
