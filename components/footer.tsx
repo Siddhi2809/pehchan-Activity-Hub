@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { 
   Mail, 
   MapPin, 
@@ -132,17 +133,22 @@ export function Footer() {
             {/* Brand Column */}
             <div className="lg:col-span-1">
               {/* Logo */}
-              <Link href="/" className="inline-flex items-center gap-3 mb-6 group">
-                <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center text-2xl group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300 shadow-lg">
-                  ⭐
-                </div>
-                <div>
-                  <span className="text-2xl font-extrabold text-white block">
-                  Phechan
-                  </span>
-                  <span className="text-white/70 text-sm">Activity Hub ✨</span>
-                </div>
-              </Link>
+            <Link href="/" className="inline-flex items-center gap-3 mb-6 group">
+              <div className="relative w-14 h-14 bg-white rounded-2xl overflow-hidden shadow-lg p-1 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+                <Image
+                  src="/logo.jpg"
+                  alt="Pehchan Activity Hub"
+                  fill
+                  className="object-contain p-1"
+                />
+              </div>
+              <div>
+                <span className="text-2xl font-extrabold text-white block">
+                  Pehchan
+                </span>
+                <span className="text-white/70 text-sm">Activity Hub ✨</span>
+              </div>
+            </Link>
               
               <p className="text-white/80 leading-relaxed mb-6">
                 Where every child's journey is filled with joy, growth, and endless possibilities! 
