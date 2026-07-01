@@ -1,17 +1,14 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { 
-  Menu, 
-  X, 
   Sparkles, 
   Home, 
   Info, 
-  Heart, 
   Mail, 
   ImageIcon,
-  Star,
   Phone,
   ChevronRight,
   ArrowRight
@@ -59,57 +56,34 @@ export function Navbar() {
         className={`
           fixed w-full top-0 z-50 transition-all duration-500
           ${scrolled 
-            ? 'bg-white/95 backdrop-blur-xl shadow-[0_4px_30px_rgba(110,193,228,0.08)] py-3' 
-            : 'bg-transparent py-5'
+            ? 'bg-white/95 backdrop-blur-xl shadow-[0_4px_30px_rgba(110,193,228,0.08)]' 
+            : 'bg-transparent'
           }
         `}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
+          <div className="flex h-[76px] items-center justify-between lg:h-[88px]">
             
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
-              {/* Logo Mark */}
-              <div className="relative">
-                {/* Main Logo Circle */}
-                <div className={`
-                  w-11 h-11 rounded-xl flex items-center justify-center
-                  transition-all duration-500 ease-out
-                  ${scrolled 
-                    ? 'bg-[#6EC1E4]' 
-                    : 'bg-white shadow-lg shadow-black/5'
-                  }
-                  group-hover:scale-105 group-hover:rotate-3
-                `}>
-                  {/* Star Icon */}
-                  <svg 
-                    viewBox="0 0 24 24" 
-                    className={`w-6 h-6 transition-colors duration-300 ${scrolled ? 'text-white' : 'text-[#6EC1E4]'}`}
-                    fill="currentColor"
-                  >
-                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                  </svg>
-                </div>
-                
-                {/* Subtle Pulse Ring - Only on hover */}
-                <div className="absolute inset-0 rounded-xl bg-[#6EC1E4]/20 scale-100 opacity-0 group-hover:scale-150 group-hover:opacity-100 transition-all duration-500 -z-10"></div>
-              </div>
-              
-              {/* Logo Text */}
-              <div className="hidden sm:block">
-                <span className={`
-                  text-lg font-bold tracking-tight transition-colors duration-300
-                  ${scrolled ? 'text-[#2D3436]' : 'text-[#2D3436]'}
-                `}>
-                  PEHCHAN 
-                </span>
-                <span className={`
-                  block text-xs font-medium tracking-wide transition-colors duration-300
-                  ${scrolled ? 'text-[#6EC1E4]' : 'text-[#636E72]'}
-                `}>
-                  Activity Hub
-                </span>
-              </div>
+            <Link
+              href="/"
+              className={`
+                group flex h-14 w-14 items-center justify-center bg-white p-1
+                shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-500
+                hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#6EC1E4]/15
+                sm:h-16 sm:w-16 lg:h-[72px] lg:w-[72px]
+                ${scrolled ? 'scale-95' : 'scale-100'}
+              `}
+              aria-label="Pehchan Activity Hub home"
+            >
+              <Image
+                src="/logo.jpg"
+                alt="Pehchan Activity Hub"
+                width={180}
+                height={135}
+                priority
+                className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+              />
             </Link>
 
             {/* Desktop Menu */}
@@ -317,7 +291,7 @@ export function Navbar() {
       </nav>
 
       {/* Spacer */}
-      <div className={`transition-all duration-500 ${scrolled ? 'h-[68px]' : 'h-[84px]'}`}></div>
+      <div className="h-[76px] lg:h-[88px]"></div>
     </>
   )
 }

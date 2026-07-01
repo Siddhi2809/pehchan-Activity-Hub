@@ -519,17 +519,14 @@ export default function Home() {
           </div>
 
           {/* Team Grid - Hexagon Style */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6 max-w-5xl mx-auto mb-12">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-4 max-w-5xl mx-auto mb-12">
             {[
-              { emoji: '⭐', color: '#6EC1E4', image: '/dance1.jpg' },
-              { emoji: '💜', color: '#95E1D3', image: '/music-therapy1.jpg' },
+              { emoji: '⭐', color: '#6EC1E4', image: '/asmita.jpg' },
+              { emoji: '💜', color: '#95E1D3', image: '/dance.jpg' },
               { emoji: '🌟', color: '#FFD166', image: '/yoga5.jpg' },
               { emoji: '💪', color: '#FF8C94', image: '/pratik.jpg' },
               { emoji: '🎨', color: '#6EC1E4', image: '/vaishnavi.jpg' },
-              { emoji: '🎵', color: '#95E1D3', image: '/team-6.jpg' },
-              { emoji: '🧘', color: '#FFD166', image: '/team-7.jpg' },
-              { emoji: '🥋', color: '#FF8C94', image: '/team-8.jpg' },
-              { emoji: '🍎', color: '#95E1D3', image: '/team-9.jpg' },
+              
             ].map((member, i) => (
               <div
                 key={i}
@@ -562,7 +559,7 @@ export default function Home() {
           {/* CTA Button */}
           <div className="text-center">
             <Link
-              href="/team"
+              href="#"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#FF8C94] to-[#6EC1E4] text-white rounded-full font-bold text-lg shadow-lg shadow-[#FF8C94]/30 hover:shadow-xl hover:shadow-[#FF8C94]/40 transition-all duration-300 hover:-translate-y-1 hover:scale-105"
             >
               Meet Our Full Team

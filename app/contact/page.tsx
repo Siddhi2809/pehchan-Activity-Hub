@@ -35,6 +35,7 @@ export default function Contact() {
   })
   const [submitted, setSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
   const [activeAccordion, setActiveAccordion] = useState<number | null>(null)
 
   const handleChange = (
@@ -50,26 +51,44 @@ export default function Contact() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    setIsSubmitting(false)
-    setSubmitted(true)
-    setFormData({ 
-      name: '', 
-      email: '', 
-      phone: '', 
-      childName: '', 
-      childAge: '',
-      service: '',
-      message: '' 
-    })
-    
-    // Reset success message after 8 seconds
-    setTimeout(() => setSubmitted(false), 8000)
-  }
+    setSubmitError('')
+    setSubmitted(false)
 
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = (await response.json()) as { success?: boolean; message?: string }
+
+      if (!response.ok || !data.success) {
+        setSubmitError(data.message || 'Unable to send message right now. Please try again.')
+        return
+      }
+
+      setSubmitted(true)
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        childName: '',
+        childAge: '',
+        service: '',
+        message: '',
+      })
+
+      // Reset success message after 8 seconds
+      setTimeout(() => setSubmitted(false), 8000)
+    } catch {
+      setSubmitError('Something went wrong. Please try again in a minute.')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
   const contactInfo = [
     {
       icon: Phone,
@@ -276,6 +295,12 @@ export default function Contact() {
                         </p>
                       </div>
                     </div>
+                  </div>
+                )}
+
+                {submitError && (
+                  <div className="mb-8 p-4 bg-[#FFF0F1] border-2 border-[#FF8C94] rounded-xl text-[#2D3436]">
+                    {submitError}
                   </div>
                 )}
 
