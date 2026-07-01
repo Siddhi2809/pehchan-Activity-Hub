@@ -8,7 +8,6 @@ import {
   Mail, 
   Phone, 
   Baby, 
-  Calendar, 
   Target, 
   MessageCircle, 
   CheckCircle2, 
@@ -23,8 +22,7 @@ export function PopupForm() {
     name: '',
     email: '',
     phone: '',
-    childName: '',
-    childAge: '',
+    childNameAge: '',
     service: '',
     message: '',
   })
@@ -72,8 +70,7 @@ export function PopupForm() {
         `Name: ${formData.name}`,
         `Email: ${formData.email}`,
         `Phone: ${formData.phone || 'N/A'}`,
-        `Child Name: ${formData.childName || 'N/A'}`,
-        `Child Age: ${formData.childAge || 'N/A'}`,
+        `Child Name & Age: ${formData.childNameAge || 'N/A'}`,
         `Service: ${formData.service || 'N/A'}`,
         '',
         'Message:',
@@ -93,8 +90,7 @@ export function PopupForm() {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
-          childName: formData.childName,
-          childAge: formData.childAge,
+          childNameAge: formData.childNameAge,
           service: formData.service,
           message: formData.message,
           details,
@@ -116,8 +112,7 @@ export function PopupForm() {
         name: '',
         email: '',
         phone: '',
-        childName: '',
-        childAge: '',
+        childNameAge: '',
         service: '',
         message: '',
       })
@@ -150,7 +145,7 @@ export function PopupForm() {
       <div className="absolute inset-0" onClick={handleClose} />
 
       {/* Modal Container */}
-      <div className="relative w-full max-w-lg md:max-w-2xl bg-[#FFF7E6] rounded-3xl overflow-hidden shadow-2xl border-4 border-white animate-pop-in flex flex-col max-h-[90vh] z-10">
+      <div className="relative w-full max-w-md bg-[#FFF7E6] rounded-2xl overflow-hidden shadow-2xl border-4 border-white animate-pop-in flex flex-col max-h-[90vh] z-10">
         
         {/* Soft Background Blobs */}
         <div className="absolute inset-0 z-0 pointer-events-none opacity-30">
@@ -168,7 +163,7 @@ export function PopupForm() {
         </button>
 
         {/* Scrollable Content wrapper to prevent offscreen elements on small viewports */}
-        <div className="relative z-10 flex-1 overflow-y-auto p-6 md:p-8 scrollbar-thin">
+        <div className="relative z-10 flex-1 overflow-y-auto p-5 md:p-6 scrollbar-thin">
           {submitted ? (
             /* Success State */
             <div className="flex flex-col items-center justify-center text-center py-10 md:py-16">
@@ -192,15 +187,15 @@ export function PopupForm() {
             /* Form State */
             <div>
               {/* Header */}
-              <div className="text-center mb-6">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FFF8E5] border border-[#FFD166] mb-3 shadow-sm">
-                  <Sparkles className="w-4 h-4 text-[#FFD166]" />
-                  <span className="text-xs font-semibold text-[#2D3436]">Special Session Request</span>
+              <div className="text-center mb-4">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#FFF8E5] border border-[#FFD166] mb-2 shadow-sm">
+                  <Sparkles className="w-3.5 h-3.5 text-[#FFD166]" />
+                  <span className="text-[10px] font-semibold text-[#2D3436]">Special Session Request</span>
                 </div>
-                <h2 className="text-3xl font-extrabold text-[#2D3436]">
+                <h2 className="text-2xl font-extrabold text-[#2D3436]">
                   Let's Connect! 🌟
                 </h2>
-                <p className="text-[#636E72] text-sm max-w-md mx-auto mt-1">
+                <p className="text-[#636E72] text-xs max-w-sm mx-auto mt-0.5">
                   Have questions or want to book a session? Leave your details below and we will get back to you!
                 </p>
               </div>
@@ -212,12 +207,12 @@ export function PopupForm() {
               )}
 
               {/* Form */}
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-3">
                 {/* Name & Email */}
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label htmlFor="popup-name" className="flex items-center gap-1.5 text-xs font-semibold text-[#2D3436] mb-1.5">
-                      <User className="w-3.5 h-3.5 text-[#6EC1E4]" />
+                    <label htmlFor="popup-name" className="flex items-center gap-1 text-[11px] font-semibold text-[#2D3436] mb-1">
+                      <User className="w-3 h-3 text-[#6EC1E4]" />
                       Your Name *
                     </label>
                     <input
@@ -227,14 +222,14 @@ export function PopupForm() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-3.5 py-2.5 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] text-sm placeholder:text-[#B2BEC3] focus:outline-none focus:border-[#6EC1E4] focus:ring-4 focus:ring-[#6EC1E4]/10 transition-all"
+                      className="w-full px-3 py-2 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] text-xs placeholder:text-[#B2BEC3] focus:outline-none focus:border-[#6EC1E4] focus:ring-4 focus:ring-[#6EC1E4]/10 transition-all"
                       placeholder="John Smith"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="popup-email" className="flex items-center gap-1.5 text-xs font-semibold text-[#2D3436] mb-1.5">
-                      <Mail className="w-3.5 h-3.5 text-[#FF8C94]" />
+                    <label htmlFor="popup-email" className="flex items-center gap-1 text-[11px] font-semibold text-[#2D3436] mb-1">
+                      <Mail className="w-3 h-3 text-[#FF8C94]" />
                       Email Address *
                     </label>
                     <input
@@ -244,17 +239,17 @@ export function PopupForm() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-3.5 py-2.5 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] text-sm placeholder:text-[#B2BEC3] focus:outline-none focus:border-[#FF8C94] focus:ring-4 focus:ring-[#FF8C94]/10 transition-all"
+                      className="w-full px-3 py-2 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] text-xs placeholder:text-[#B2BEC3] focus:outline-none focus:border-[#FF8C94] focus:ring-4 focus:ring-[#FF8C94]/10 transition-all"
                       placeholder="john@example.com"
                     />
                   </div>
                 </div>
 
-                {/* Phone & Child Name */}
-                <div className="grid md:grid-cols-2 gap-4">
+                {/* Phone & Service Interest */}
+                <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label htmlFor="popup-phone" className="flex items-center gap-1.5 text-xs font-semibold text-[#2D3436] mb-1.5">
-                      <Phone className="w-3.5 h-3.5 text-[#95E1D3]" />
+                    <label htmlFor="popup-phone" className="flex items-center gap-1 text-[11px] font-semibold text-[#2D3436] mb-1">
+                      <Phone className="w-3 h-3 text-[#95E1D3]" />
                       Phone Number
                     </label>
                     <input
@@ -263,49 +258,14 @@ export function PopupForm() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-3.5 py-2.5 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] text-sm placeholder:text-[#B2BEC3] focus:outline-none focus:border-[#95E1D3] focus:ring-4 focus:ring-[#95E1D3]/10 transition-all"
+                      className="w-full px-3 py-2 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] text-xs placeholder:text-[#B2BEC3] focus:outline-none focus:border-[#95E1D3] focus:ring-4 focus:ring-[#95E1D3]/10 transition-all"
                       placeholder="+91 7000000000"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="popup-childName" className="flex items-center gap-1.5 text-xs font-semibold text-[#2D3436] mb-1.5">
-                      <Baby className="w-3.5 h-3.5 text-[#FFD166]" />
-                      Child's Name
-                    </label>
-                    <input
-                      type="text"
-                      id="popup-childName"
-                      name="childName"
-                      value={formData.childName}
-                      onChange={handleChange}
-                      className="w-full px-3.5 py-2.5 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] text-sm placeholder:text-[#B2BEC3] focus:outline-none focus:border-[#FFD166] focus:ring-4 focus:ring-[#FFD166]/10 transition-all"
-                      placeholder="Child's name"
-                    />
-                  </div>
-                </div>
-
-                {/* Child Age & Service */}
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="popup-childAge" className="flex items-center gap-1.5 text-xs font-semibold text-[#2D3436] mb-1.5">
-                      <Calendar className="w-3.5 h-3.5 text-[#6EC1E4]" />
-                      Child's Age
-                    </label>
-                    <input
-                      type="text"
-                      id="popup-childAge"
-                      name="childAge"
-                      value={formData.childAge}
-                      onChange={handleChange}
-                      className="w-full px-3.5 py-2.5 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] text-sm placeholder:text-[#B2BEC3] focus:outline-none focus:border-[#6EC1E4] focus:ring-4 focus:ring-[#6EC1E4]/10 transition-all"
-                      placeholder="e.g., 5 years"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="popup-service" className="flex items-center gap-1.5 text-xs font-semibold text-[#2D3436] mb-1.5">
-                      <Target className="w-3.5 h-3.5 text-[#95E1D3]" />
+                    <label htmlFor="popup-service" className="flex items-center gap-1 text-[11px] font-semibold text-[#2D3436] mb-1">
+                      <Target className="w-3 h-3 text-[#95E1D3]" />
                       Service Interest
                     </label>
                     <select
@@ -313,7 +273,7 @@ export function PopupForm() {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-3.5 py-2.5 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] text-sm focus:outline-none focus:border-[#95E1D3] focus:ring-4 focus:ring-[#95E1D3]/10 transition-all cursor-pointer"
+                      className="w-full px-3 py-2 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] text-xs focus:outline-none focus:border-[#95E1D3] focus:ring-4 focus:ring-[#95E1D3]/10 transition-all cursor-pointer"
                     >
                       <option value="">Select a service...</option>
                       {services.map((service) => (
@@ -325,10 +285,27 @@ export function PopupForm() {
                   </div>
                 </div>
 
+                {/* Child Name & Age (Combined) */}
+                <div>
+                  <label htmlFor="popup-childNameAge" className="flex items-center gap-1 text-[11px] font-semibold text-[#2D3436] mb-1">
+                    <Baby className="w-3.5 h-3.5 text-[#FFD166]" />
+                    Child's Name & Age
+                  </label>
+                  <input
+                    type="text"
+                    id="popup-childNameAge"
+                    name="childNameAge"
+                    value={formData.childNameAge}
+                    onChange={handleChange}
+                    className="w-full px-3 py-2 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] text-xs placeholder:text-[#B2BEC3] focus:outline-none focus:border-[#FFD166] focus:ring-4 focus:ring-[#FFD166]/10 transition-all"
+                    placeholder="e.g., Leo, 5 years"
+                  />
+                </div>
+
                 {/* Message */}
                 <div>
-                  <label htmlFor="popup-message" className="flex items-center gap-1.5 text-xs font-semibold text-[#2D3436] mb-1.5">
-                    <MessageCircle className="w-3.5 h-3.5 text-[#6EC1E4]" />
+                  <label htmlFor="popup-message" className="flex items-center gap-1 text-[11px] font-semibold text-[#2D3436] mb-1">
+                    <MessageCircle className="w-3 h-3 text-[#6EC1E4]" />
                     Your Message *
                   </label>
                   <textarea
@@ -337,8 +314,8 @@ export function PopupForm() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={3}
-                    className="w-full px-3.5 py-2.5 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] text-sm placeholder:text-[#B2BEC3] focus:outline-none focus:border-[#6EC1E4] focus:ring-4 focus:ring-[#6EC1E4]/10 transition-all resize-none"
+                    rows={2}
+                    className="w-full px-3 py-2 rounded-xl border-2 border-[#E8E8E8] bg-white text-[#2D3436] text-xs placeholder:text-[#B2BEC3] focus:outline-none focus:border-[#6EC1E4] focus:ring-4 focus:ring-[#6EC1E4]/10 transition-all resize-none"
                     placeholder="How can we help your child?"
                   />
                 </div>
@@ -348,8 +325,8 @@ export function PopupForm() {
                   type="submit"
                   disabled={isSubmitting}
                   className={`
-                    w-full px-6 py-3.5 rounded-xl font-bold text-sm text-white
-                    transition-all duration-300 mt-2 cursor-pointer
+                    w-full px-5 py-3 rounded-xl font-bold text-xs text-white
+                    transition-all duration-300 mt-1 cursor-pointer
                     ${isSubmitting 
                       ? 'bg-[#B2BEC3] cursor-not-allowed' 
                       : 'bg-[#2D3436] hover:bg-[#6EC1E4] shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0'
@@ -357,20 +334,20 @@ export function PopupForm() {
                   `}
                 >
                   {isSubmitting ? (
-                    <span className="flex items-center justify-center gap-2">
-                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                    <span className="flex items-center justify-center gap-1.5">
+                      <div className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
                       Sending...
                     </span>
                   ) : (
-                    <span className="flex items-center justify-center gap-2">
-                      <Send className="w-4 h-4" />
+                    <span className="flex items-center justify-center gap-1.5">
+                      <Send className="w-3.5 h-3.5" />
                       Send Message
                     </span>
                   )}
                 </button>
 
                 {/* Privacy Note */}
-                <p className="text-center text-xs text-[#636E72]">
+                <p className="text-center text-[10px] text-[#636E72]">
                   Your information is secure and confidential
                 </p>
               </form>
