@@ -23,6 +23,8 @@ import {
 import { FormEvent, useState } from 'react'
 import Link from 'next/link'
 
+const FORM_SUBMIT_EMAIL = 'asmita@kidzexploretherapy.com'
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -55,17 +57,46 @@ export default function Contact() {
     setSubmitted(false)
 
     try {
-      const response = await fetch('/api/contact', {
+      const subject = `New Contact Form: ${formData.name}`
+      const details = [
+        `Name: ${formData.name}`,
+        `Email: ${formData.email}`,
+        `Phone: ${formData.phone || 'N/A'}`,
+        `Child Name: ${formData.childName || 'N/A'}`,
+        `Child Age: ${formData.childAge || 'N/A'}`,
+        `Service: ${formData.service || 'N/A'}`,
+        '',
+        'Message:',
+        formData.message,
+      ].join('\n')
+
+      const response = await fetch(`https://formsubmit.co/ajax/${FORM_SUBMIT_EMAIL}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          _subject: subject,
+          _captcha: 'false',
+          _template: 'table',
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          childName: formData.childName,
+          childAge: formData.childAge,
+          service: formData.service,
+          message: formData.message,
+          details,
+        }),
       })
 
-      const data = (await response.json()) as { success?: boolean; message?: string }
+      const data = (await response.json()) as {
+        success?: boolean | string
+        message?: string
+      }
 
-      if (!response.ok || !data.success) {
+      if (!response.ok || !(data.success === true || data.success === 'true')) {
         setSubmitError(data.message || 'Unable to send message right now. Please try again.')
         return
       }
