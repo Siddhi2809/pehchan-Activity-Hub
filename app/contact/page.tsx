@@ -654,7 +654,7 @@ export default function Contact() {
               Still have questions? We're here to help!
             </p>
             <a
-              href="tel:+15551234567"
+              href="tel:+7039337562"
               className="inline-flex items-center gap-3 px-8 py-4 bg-[#6EC1E4] text-white rounded-full font-bold shadow-lg hover:bg-[#4DA8CE] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               <Phone className="w-5 h-5" />
