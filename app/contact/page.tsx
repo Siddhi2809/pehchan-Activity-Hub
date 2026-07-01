@@ -23,6 +23,8 @@ import {
 import { FormEvent, useState } from 'react'
 import Link from 'next/link'
 
+const FORM_SUBMIT_EMAIL = 'asmita@kidzexploretherapy.com'
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -35,6 +37,7 @@ export default function Contact() {
   })
   const [submitted, setSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
   const [activeAccordion, setActiveAccordion] = useState<number | null>(null)
 
   const handleChange = (
@@ -50,26 +53,73 @@ export default function Contact() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    setIsSubmitting(false)
-    setSubmitted(true)
-    setFormData({ 
-      name: '', 
-      email: '', 
-      phone: '', 
-      childName: '', 
-      childAge: '',
-      service: '',
-      message: '' 
-    })
-    
-    // Reset success message after 8 seconds
-    setTimeout(() => setSubmitted(false), 8000)
-  }
+    setSubmitError('')
+    setSubmitted(false)
 
+    try {
+      const subject = `New Contact Form: ${formData.name}`
+      const details = [
+        `Name: ${formData.name}`,
+        `Email: ${formData.email}`,
+        `Phone: ${formData.phone || 'N/A'}`,
+        `Child Name: ${formData.childName || 'N/A'}`,
+        `Child Age: ${formData.childAge || 'N/A'}`,
+        `Service: ${formData.service || 'N/A'}`,
+        '',
+        'Message:',
+        formData.message,
+      ].join('\n')
+
+      const response = await fetch(`https://formsubmit.co/ajax/${FORM_SUBMIT_EMAIL}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          _subject: subject,
+          _captcha: 'false',
+          _template: 'table',
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          childName: formData.childName,
+          childAge: formData.childAge,
+          service: formData.service,
+          message: formData.message,
+          details,
+        }),
+      })
+
+      const data = (await response.json()) as {
+        success?: boolean | string
+        message?: string
+      }
+
+      if (!response.ok || !(data.success === true || data.success === 'true')) {
+        setSubmitError(data.message || 'Unable to send message right now. Please try again.')
+        return
+      }
+
+      setSubmitted(true)
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        childName: '',
+        childAge: '',
+        service: '',
+        message: '',
+      })
+
+      // Reset success message after 8 seconds
+      setTimeout(() => setSubmitted(false), 8000)
+    } catch {
+      setSubmitError('Something went wrong. Please try again in a minute.')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
   const contactInfo = [
     {
       icon: Phone,
@@ -276,6 +326,12 @@ export default function Contact() {
                         </p>
                       </div>
                     </div>
+                  </div>
+                )}
+
+                {submitError && (
+                  <div className="mb-8 p-4 bg-[#FFF0F1] border-2 border-[#FF8C94] rounded-xl text-[#2D3436]">
+                    {submitError}
                   </div>
                 )}
 
@@ -598,7 +654,7 @@ export default function Contact() {
               Still have questions? We're here to help!
             </p>
             <a
-              href="tel:+15551234567"
+              href="tel:+7039337562"
               className="inline-flex items-center gap-3 px-8 py-4 bg-[#6EC1E4] text-white rounded-full font-bold shadow-lg hover:bg-[#4DA8CE] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               <Phone className="w-5 h-5" />

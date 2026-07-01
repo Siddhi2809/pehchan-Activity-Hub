@@ -305,7 +305,7 @@ export function Footer() {
               {/* Copyright */}
               <p className="text-white/70 text-sm flex items-center gap-2">
                 <span>© {currentYear} Pehchan Activity Hub Therapy.</span>
-                <span className="hidden sm:inline">Made with</span>
+                <span className="hidden sm:inline">Made with <a href="https://jisnudigital.com" target="_blank" rel="noopener noreferrer" className="text-[#FFD166] hover:text-[#FF8C94] transition-colors">Jisnu Digital</a></span>
                 <Heart className="w-4 h-4 text-[#FF8C94] fill-current animate-heartbeat hidden sm:inline" />
                 <span className="hidden sm:inline">for little ones</span>
               </p>
